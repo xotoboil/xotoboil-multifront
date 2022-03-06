@@ -1,0 +1,49 @@
+{
+  "name": "portal",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "webpack-cli serve --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "serve": "serve dist",
+    "clean": "rm -rf dist",
+    "test": "jest src --passWithNoTests --maxWorkers=50%",
+    "test:coverage": "jest src --passWithNoTests --maxWorkers=50% --coverage"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "single-spa": "^5.9.3",
+    "single-spa-react": "^4.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/runtime": "^7.16.0",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/single-spa-react": "^4.0.0",
+    "babel-loader": "^8.2.3",
+    "bundle-loader": "^0.5.6",
+    "clean-webpack-plugin": "^4.0.0",
+    "dotenv": "^10.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.3.1",
+    "style-loader": "3.3.1",
+    "css-loader": "^6.5.1",
+    "semver": "^7.3.5",
+    "serve": "^13.0.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "webpack-merge": "^5.8.0"
+  }
+}

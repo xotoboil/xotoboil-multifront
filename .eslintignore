@@ -1,0 +1,9 @@
+# IGNORE ALL HTML FILES:
+
+*.html
+
+*.tsbuildinfo
+*.md
+
+# CUSTOM
+packages/shell/src/utils/system.js

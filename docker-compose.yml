@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  app1:
+    extends:
+      file: /packages/app1/docker-compose.yml
+      service: app1
+      
+  app2:
+    extends:
+      file: /packages/app2/docker-compose.yml
+      service: app2
+      
+  app3:
+    extends:
+      file: /packages/app3/docker-compose.yml
+      service: app3
+      
+  portal:
+    extends:
+      file: /packages/portal/docker-compose.yml
+      service: portal
+      
+  shell:
+    extends:
+      file: /packages/shell/docker-compose.yml
+      service: shell
+      

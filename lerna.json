@@ -1,0 +1,8 @@
+{
+	"packages": ["packages/portal", "packages/app1", "packages/app2", "packages/app3", "packages/shell"],
+	"useWorkspaces": true,
+	"nohoist": ["**"],
+	"ignoreChanges": ["**/__tests__/**", "**/*.md"],
+	"version": "1.1.0",
+	"npmClient": "yarn"
+}

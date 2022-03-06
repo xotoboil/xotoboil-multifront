@@ -1,0 +1,64 @@
+{
+	"name": "multiframework-frontends",
+	"version": "1.0.0",
+	"description": "global multiframework",
+	"license": "ISC",
+	"private": true,
+	"workspaces": {
+		"nohoist": [
+			"**"
+		],
+		"packages": [
+			"packages/app1",
+			"packages/app2",
+			"packages/app3",
+			"packages/portal",
+			"packages/shell"
+		]
+	},
+	"scripts": {
+		"postinstall":"yarn workspace app1 run postinstall",
+		"boot": "yarn clean && yarn initialize",
+		"clean": "lerna clean --yes && lerna exec -- rm -rf dist",
+		"build": "lerna run build --stream",
+		"start": "lerna exec yarn start --parallel",
+		"start:app": "lerna run start --stream --scope={shell,portal,app1,app2,app3}",
+		"start:shell": "lerna run start --stream --scope=shell",
+		"start:portal": "lerna run start --stream --scope=portal",
+		"start:app1": "lerna run start --stream --scope=app1",
+		"start:app2": "lerna run start --stream --scope=app2",
+		"start:app3": "lerna run start --stream --scope=app3",
+		"initialize": "yarn install --legacy-peer-deps && yarn postinstall",
+		"lerna:diff": "lerna diff",
+		"lerna:changed": "lerna changed",
+		"lerna:version": "lerna version --conventional-commits --yes",
+		"lint:es": "sh utilities/scripts/lintify/Lintify.sh",
+		"lint:style": "sh utilities/scripts/stylify/Stylify.sh",
+		"format:prettify": "sh utilities/scripts/prettify/Prettify.sh",
+		"test": "lerna run test --stream --since",
+		"test:e2e": "lerna run test:e2e --stream --since"
+	},
+	"dependencies": {
+		"lerna": "^4.0.0"
+	},
+	"devDependencies": {
+		"jest": "^27.3.1",
+		"@types/jest": "^27.0.2",
+		"ts-jest": "^27.0.7",
+		"@types/node": "^16.11.6",
+		"stylelint": "^14.0.1",
+		"stylelint-config-standard": "^23.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-scss": "^4.0.0",
+		"prettier": "^2.4.1",
+		"eslint": "^8.2.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-unused-imports": "^1.1.5",
+		"eslint-plugin-simple-import-sort": "^7.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-jest": "^25.2.3",
+		"@typescript-eslint/parser": "^5.3.0",
+		"@typescript-eslint/eslint-plugin": "^5.3.0",
+		"typescript": "^4.4.4"
+	}
+}
