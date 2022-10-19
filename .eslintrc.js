@@ -23,7 +23,7 @@ module.exports = {
 	plugins: ["simple-import-sort", "@typescript-eslint/eslint-plugin", "unused-imports", "jest"],
 	ignorePatterns: ["**/utilities/*", "**/*.json", "**/*.svg", "**/*.md", "**/*.csv", "**/*.lock", "**/*.css", "**/*.scss"],
 	rules: {
-		"@typescript-eslint/typedef": [error, {arrayDestructuring: true, arrowParameter: true, memberVariableDeclaration: true, objectDestructuring: true, parameter: true, propertyDeclaration: true, variableDeclaration: true}],
+		"@typescript-eslint/typedef": [off, {arrayDestructuring: true, arrowParameter: true, memberVariableDeclaration: true, objectDestructuring: true, parameter: true, propertyDeclaration: true, variableDeclaration: true}],
 		"prettier/prettier": ["error", {}, {fileInfoOptions: {withNodeModules: true}, usePrettierrc: true}],
 		"no-new": [off],
 		"no-unused-vars": off,
