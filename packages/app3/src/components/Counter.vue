@@ -1,11 +1,10 @@
 <template>
 	<div>
-		<h1>Vue app</h1>
-		{{ counter }}
-		<button @click="increment">Increment</button>
-		<h2>Global counter</h2>
-		{{ globalEventDistributor.globalStore.counter }}
-		<button @click="globalEventDistributor.globalStore.counter++">IncrementGlobal</button>
+		<h1>vue app3</h1>
+		<h2>Local Counter {{ counter }}</h2>
+		<h2>Global Counter {{ globalEventDistributor.globalStore.counter }}</h2>
+	<button @click="increment">increment</button>
+	<button @click="globalEventDistributor.globalStore.counter++">increment global</button>
 	</div>
 </template>
 
@@ -19,7 +18,6 @@ import { Vue } from "vue-class-component";
 export default class Counter extends Vue {
 	@Prop()
 	globalEventDistributor: any;
-	
 
 	get counter() {
 		return store.state.counter;

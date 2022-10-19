@@ -9,9 +9,7 @@ export class CounterActions {
 	constructor(private store: Store<AppState>) {}
 
 	incrementGlobal(): void {
-		if (globalEventDistributor && globalEventDistributor.globalStore) {
-			globalEventDistributor.globalStore.counter++;
-		}
+		if (globalEventDistributor && globalEventDistributor.globalStore) globalEventDistributor.globalStore.counter++;
 	}
 
 	increment(): void {

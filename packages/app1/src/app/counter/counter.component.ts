@@ -10,8 +10,8 @@ import {AppState} from "../app.state";
 	selector: "app-counter",
 	template: `
 		<div>
-			<p>Counter: {{ counterCurrent | async }}</p>
-			<p>Counter: {{ globalStore ? globalStore.counter : 0 }}</p>
+			<h2>Local Counter: {{ counterCurrent | async }}</h2>
+			<h2>Global Counter: {{ globalStore ? globalStore.counter : 0 }}</h2>
 			<button (click)="actions.increment()">increment</button>
 			<button (click)="actions.incrementGlobal()">increment global</button>
 		</div>

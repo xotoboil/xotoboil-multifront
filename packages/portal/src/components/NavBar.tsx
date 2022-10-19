@@ -9,16 +9,17 @@ export const NavBar: any = (): JSX.Element => (
 					Home
 				</a>
 			</li>
-			&nbsp;|&nbsp;
-			<li style={{display: "inline"}}>
-				<a href="/react" onClick={navigateToUrl}>
-					React Application
-				</a>
-			</li>
+
 			&nbsp;|&nbsp;
 			<li style={{display: "inline"}}>
 				<a href="/angular" onClick={navigateToUrl}>
 					Angular Application
+				</a>
+			</li>
+			&nbsp;|&nbsp;
+			<li style={{display: "inline"}}>
+				<a href="/react" onClick={navigateToUrl}>
+					React Application
 				</a>
 			</li>
 			&nbsp;|&nbsp;

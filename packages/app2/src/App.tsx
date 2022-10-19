@@ -8,7 +8,7 @@ export let globalEventDistributor: any;
 
 export const App: any = (props: any): JSX.Element => (
 	<div>
-		<h1>React Application {props.name}</h1>
+		<h1>react {props.name}</h1>
 		<Counter />
 	</div>
 );

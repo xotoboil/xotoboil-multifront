@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-html {
-	background-color: yellow;
-}
+@import "./scss/_app1.scss";
+@import "./scss/_app2.scss";
+@import "./scss/_app3.scss";
+@import "./scss/_portal.scss";
+@import "./scss/_base.scss";
