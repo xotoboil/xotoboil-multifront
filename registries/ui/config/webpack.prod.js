@@ -10,7 +10,7 @@ const prodConfig = {
 
 	output: {
 		path: path.resolve(process.cwd(), "dist"),
-		filename: "[name].[contenthash].js",
+		filename: "[name].js",
 	},
 
 	plugins: [new CleanWebpackPlugin()],

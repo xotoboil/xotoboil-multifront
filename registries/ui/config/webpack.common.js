@@ -47,5 +47,8 @@ module.exports = {
 		filename: "index.js",
 		library: "@xotoboil-multifront/ui",
 		libraryTarget: "umd",
+	},
+	externals: {
+		vue: "vue"
 	}
 };
