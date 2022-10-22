@@ -27,7 +27,10 @@ I hope you like this repo, there are always room for improvements, but it's avai
 ~ THE SCRIPTS :
 
 ```shell 
-yarn boot # to install all deps
+yarn boot # to install all ui deps
+yarn install # to install full app
+yarn start # to start full app
+
 yarn start:shell # to run shell - (required)
 yarn start:portal # to run portal - (required)
 yarn start:app1 # to run app1 - (micro service)

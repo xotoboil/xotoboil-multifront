@@ -1,8 +1,8 @@
 import {Injectable} from "@angular/core";
 import {Store} from "@ngrx/store";
-import {AppState} from "../app.state";
-import {createAction} from "../../store/createAction";
+import {createAction} from "../../../store/createAction";
 import {globalEventDistributor} from "src/single-spa/single-spa-props";
+import {AppState} from "src/app/app.state";
 
 @Injectable()
 export class CounterActions {

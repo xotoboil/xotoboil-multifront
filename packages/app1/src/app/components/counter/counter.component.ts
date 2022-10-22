@@ -4,7 +4,7 @@ import {CounterService} from "./counter.service";
 import {CounterActions} from "./counter.actions";
 import {globalEventDistributor} from "src/single-spa/single-spa-props";
 import {Store} from "@ngrx/store";
-import {AppState} from "../app.state";
+import {AppState} from "src/app/app.state";
 
 @Component({
 	selector: "app-counter",

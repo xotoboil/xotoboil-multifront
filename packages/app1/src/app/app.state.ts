@@ -1,4 +1,4 @@
-import {Counter} from "./counter/counter";
+import {Counter} from "./components/counter/counter";
 
 export interface AppState {
 	readonly counter: Counter;

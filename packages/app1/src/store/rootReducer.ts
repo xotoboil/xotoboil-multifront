@@ -1,4 +1,4 @@
-import {counterReducer} from "../app/counter/counter.reducer";
+import {counterReducer} from "src/app/components/counter/counter.reducer";
 
 export const rootReducer: {} = {
 	counter: counterReducer,

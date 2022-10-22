@@ -7,8 +7,8 @@ import {rootReducer} from "src/store/rootReducer";
 
 import {AppRoutingModule} from "./app-routing.module";
 import {AppComponent} from "./app.component";
-import {CounterModule} from "./counter/counter.module";
-import {EmptyRouteComponent} from "./empty-route/empty-route-component";
+import {CounterModule} from "./components/counter/counter.module";
+import {EmptyRouteComponent} from "./pages/empty-route/empty-route-component";
 
 @NgModule({
 	declarations: [AppComponent, EmptyRouteComponent],

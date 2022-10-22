@@ -14,26 +14,21 @@
 		]
 	},
 	"scripts": {
-		"postinstall":"yarn workspace @xotoboil-multifront/app1 run postinstall",
-		"boot": "yarn clean && yarn initialize",
-		"clean": "lerna clean --yes && lerna exec -- rm -rf dist",
-		"build": "lerna run build --stream",
-		"start": "lerna exec yarn start --parallel",
-		"start:app": "lerna run start --stream --scope={shell,portal,app1,app2,app3}",
-		"start:shell": "lerna run start --stream --scope=shell",
-		"start:portal": "lerna run start --stream --scope=portal",
-		"start:app1": "lerna run start --stream --scope=app1",
-		"start:app2": "lerna run start --stream --scope=app2",
-		"start:app3": "lerna run start --stream --scope=app3",
+		"postinstall": "yarn workspace @xotoboil-multifront/app1 run postinstall",
+		"boot": "yarn workspace @xotoboil-multifront/ui run build && yarn initialize",
+		"start": "yarn workspace @xotoboil-multifront/* run start",
+		"start:shell": "yarn workspace @xotoboil-multifront/shell run start",
+		"start:portal": "yarn workspace @xotoboil-multifront/portal run start",
+		"start:app1": "yarn workspace @xotoboil-multifront/app1 run start",
+		"start:app2": "yarn workspace @xotoboil-multifront/app2 run start",
+		"start:app3": "yarn workspace @xotoboil-multifront/app3 run start",
 		"initialize": "yarn install --legacy-peer-deps && yarn postinstall",
 		"lerna:diff": "lerna diff",
-		"lerna:changed": "lerna changed",
-		"lerna:version": "lerna version --conventional-commits --yes",
 		"lint:es": "sh utilities/scripts/lintify/Lintify.sh",
 		"lint:style": "sh utilities/scripts/stylify/Stylify.sh",
 		"format:prettify": "sh utilities/scripts/prettify/Prettify.sh",
-		"test": "lerna run test --stream --since",
-		"test:e2e": "lerna run test:e2e --stream --since"
+		"test": "yarn workspace @xotoboil-multifront/* run test",
+		"test:e2e": "yarn workspace @xotoboil-multifront/* run test:e2e"
 	},
 	"dependencies": {
 		"lerna": "^4.0.0"
