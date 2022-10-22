@@ -1,5 +1,5 @@
 {
-	"packages": ["packages/portal", "packages/app1", "packages/app2", "packages/app3", "packages/shell"],
+	"packages": ["packages/**"],
 	"useWorkspaces": true,
 	"nohoist": ["**"],
 	"ignoreChanges": ["**/__tests__/**", "**/*.md"],

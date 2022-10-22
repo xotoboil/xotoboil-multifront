@@ -1,5 +1,5 @@
 {
-	"name": "multiframework-frontends",
+	"name": "@xotoboil-multifront/multiframework-frontends",
 	"version": "1.0.0",
 	"description": "global multiframework",
 	"license": "ISC",
@@ -9,16 +9,12 @@
 			"**"
 		],
 		"packages": [
-			"packages/app1",
-			"packages/app2",
-			"packages/app3",
-			"packages/portal",
-			"packages/shell",
-			"registries/ui"
+			"packages/**",
+			"registries/**"
 		]
 	},
 	"scripts": {
-		"postinstall":"yarn workspace app1 run postinstall",
+		"postinstall":"yarn workspace @xotoboil-multifront/app1 run postinstall",
 		"boot": "yarn clean && yarn initialize",
 		"clean": "lerna clean --yes && lerna exec -- rm -rf dist",
 		"build": "lerna run build --stream",

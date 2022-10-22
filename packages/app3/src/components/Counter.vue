@@ -13,8 +13,9 @@ import store from '../store';
 import { defineComponent } from 'vue';
 import { Prop, Options,  Watch } from "vue-property-decorator";
 import { Vue } from "vue-class-component";
+import {UIButton} from "@xotoboil-mutlifront/ui"
 
-@Options({name: "Counter"})
+@Options({name: "Counter", components: {UIButton}})
 export default class Counter extends Vue {
 	@Prop()
 	globalEventDistributor: any;
