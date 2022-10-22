@@ -13,7 +13,8 @@
 			"packages/app2",
 			"packages/app3",
 			"packages/portal",
-			"packages/shell"
+			"packages/shell",
+			"registries/ui"
 		]
 	},
 	"scripts": {
