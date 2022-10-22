@@ -3,7 +3,7 @@ import {initialState} from "./state";
 
 export function counterReducer(state: any = initialState, action: any) {
 	switch (action.type) {
-		case "counterIncrement":
+		case "counter/counterIncrement":
 			return counterIncrement(state);
 		default:
 			return state;

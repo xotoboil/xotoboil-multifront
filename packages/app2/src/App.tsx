@@ -1,15 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from 'react-redux';
 import singleSpaReact from "single-spa-react";
 import {Counter} from "./components/counter/Counter";
+import store from "./store/index"
 import "./index.scss";
 
 export let globalEventDistributor: any;
 
 export const App: any = (props: any): JSX.Element => (
 	<div>
-		<h1>react {props.name}</h1>
-		<Counter />
+		<Provider store={store}>
+			<h1>react {props.name}</h1>
+			<Counter />
+		</Provider>
 	</div>
 );
 
