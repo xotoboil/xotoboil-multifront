@@ -16,7 +16,7 @@
 	"scripts": {
 		"postinstall": "yarn workspace @xotoboil-multifront/app1 run postinstall",
 		"boot": "yarn workspace @xotoboil-multifront/ui run build && yarn initialize",
-		"start": "yarn workspace @xotoboil-multifront/* run start",
+		"start": "lerna exec yarn start --parallel",
 		"start:shell": "yarn workspace @xotoboil-multifront/shell run start",
 		"start:portal": "yarn workspace @xotoboil-multifront/portal run start",
 		"start:app1": "yarn workspace @xotoboil-multifront/app1 run start",

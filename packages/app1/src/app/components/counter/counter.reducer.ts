@@ -1,5 +1,5 @@
 import {Action} from "@ngrx/store";
-import {Counter, setCounterCurrent} from "./counter";
+import {Counter, setCounterCurrent} from "./counter.state";
 
 export function counterReducer(counter: Counter = {counterCurrent: 0}, action: Action): Counter {
 	switch (action.type) {
