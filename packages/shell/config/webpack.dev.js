@@ -13,7 +13,7 @@ const devConfig = {
 		historyApiFallback: {
 			index: "index.html",
 		},
-		historyApiFallback: {rewrites: [{from: /./, to: "/index.html"}] }
+		historyApiFallback: {rewrites: [{from: /./, to: "/index.html"}]},
 	},
 
 	plugins: [
