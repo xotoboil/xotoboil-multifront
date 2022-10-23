@@ -14,7 +14,6 @@
 		]
 	},
 	"scripts": {
-		"postinstall": "yarn workspace @xotoboil-multifront/app1 run postinstall",
 		"boot": "yarn workspace @xotoboil-multifront/ui run build && yarn initialize",
 		"start": "lerna exec yarn start --parallel",
 		"start:shell": "yarn workspace @xotoboil-multifront/shell run start",
@@ -22,7 +21,7 @@
 		"start:app1": "yarn workspace @xotoboil-multifront/app1 run start",
 		"start:app2": "yarn workspace @xotoboil-multifront/app2 run start",
 		"start:app3": "yarn workspace @xotoboil-multifront/app3 run start",
-		"initialize": "yarn install --legacy-peer-deps && yarn postinstall",
+		"initialize": "yarn install --legacy-peer-deps",
 		"lerna:diff": "lerna diff",
 		"lint:es": "sh utilities/scripts/lintify/Lintify.sh",
 		"lint:style": "sh utilities/scripts/stylify/Stylify.sh",

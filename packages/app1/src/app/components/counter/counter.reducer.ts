@@ -1,7 +1,8 @@
 import {Action} from "@ngrx/store";
-import {Counter, setCounterCurrent} from "./counter.state";
+import {Counter} from "src/app/models/CounterModels";
+import {initialState, setCounterCurrent} from "./counter.state";
 
-export function counterReducer(counter: Counter = {counterCurrent: 0}, action: Action): Counter {
+export function counterReducer(counter: Counter = initialState, action: Action): Counter {
 	switch (action.type) {
 		case "counterIncrement":
 			return setCounterCurrent(counter, counter.counterCurrent + 1);

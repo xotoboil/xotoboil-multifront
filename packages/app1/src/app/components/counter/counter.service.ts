@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
-import {CounterState} from "./counter.state";
+import {CounterState} from "src/app/models/CounterModels";
 
 @Injectable()
 export class CounterService {
