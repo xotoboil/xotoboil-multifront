@@ -12,7 +12,9 @@
 import store from '../store';
 import { Prop, Options,  Watch } from "vue-property-decorator";
 import { Vue } from "vue-class-component";
+
 import {UIButton} from "@xotoboil-multifront/ui"
+
 @Options({name: "Counter", components: {UIButton}})
 export default class Counter extends Vue {
 	@Prop()

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Demo meetup StencilJS</title>
+
+    <script type="module" src="/build/stencil-components.esm.js"></script>
+    <script nomodule src="/build/stencil-components.js"></script>
+    <link rel="stylesheet" href="/build/stencil-components.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+  </head>
+  <body>
+    <button class="button is-primary">Primary</button>
+
+    <you-canneles main-title="Vous prendrez bien quelques cannelés">
+      <p slot="content">
+        On a attendu d'être sûrs que le contenu de ce site vous intéresse avant de vous déranger, mais on aimerait bien vous accompagner pendant votre visite... C'est OK pour vous ?
+      </p>
+    </you-canneles>
+  </body>
+  <script>
+    document.querySelector("you-canneles").addEventListener('acceptHandler', e => {
+      console.log("Merci d'avoir accepté !")
+    })
+  </script>
+</html>

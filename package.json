@@ -14,7 +14,9 @@
 		]
 	},
 	"scripts": {
-		"boot": "yarn workspace @xotoboil-multifront/ui run build && yarn initialize",
+		"boot": "yarn run boot:ui && yarn run boot:stencil && yarn initialize",
+		"boot:ui": "yarn workspace @xotoboil-multifront/ui run build",
+		"boot:stencil": "yarn workspace @xotoboil-multifront/stencil run build",
 		"start": "lerna exec yarn start --parallel",
 		"start:shell": "yarn workspace @xotoboil-multifront/shell run start",
 		"start:portal": "yarn workspace @xotoboil-multifront/portal run start",

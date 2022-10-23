@@ -2,12 +2,12 @@
 	"name": "@xotoboil-multifront/app1",
 	"version": "0.0.0",
 	"scripts": {
-	  "ng": "ng",
-	  "start": "ng serve",
-	  "build": "ng build --configuration production",
-	  "test": "ng test",
-	  "lint": "ng lint",
-	  "e2e": "ng e2e"
+		"ng": "ng",
+		"start": "ng serve",
+		"build": "ng build --configuration production",
+		"test": "ng test",
+		"lint": "ng lint",
+		"e2e": "ng e2e"
 	},
 	"private": true,
 	"dependencies": {
