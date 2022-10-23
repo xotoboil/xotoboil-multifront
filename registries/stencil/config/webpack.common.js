@@ -1,51 +1,51 @@
 /* eslint-disable @typescript-eslint/typedef */
-const prefixer = require('postcss-prefix-selector');
+const prefixer = require("postcss-prefix-selector");
 
 module.exports = {
-  resolve: {
-    extensions: ['.js', '.tsx', '.jsx', '.ts'],
-  },
+	resolve: {
+		extensions: [".js", ".tsx", ".jsx", ".ts"],
+	},
 
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-      },
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/,
-        options: {
-          appendTsSuffixTo: [/\.vue$/],
-        },
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        loader: require.resolve('postcss-loader'),
-        options: {
-          postcssOptions: {
-            plugins: [
-              prefixer({
-                prefix: '#single-spa-application\\:ui',
-              }),
-            ],
-          },
-        },
-      },
-    ],
-  },
+	module: {
+		rules: [
+			{
+				test: /\.vue$/,
+				loader: "vue-loader",
+			},
+			{
+				test: /\.tsx?$/,
+				loader: "ts-loader",
+				exclude: /node_modules/,
+				options: {
+					appendTsSuffixTo: [/\.vue$/],
+				},
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: ["style-loader", "css-loader"],
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				loader: require.resolve("postcss-loader"),
+				options: {
+					postcssOptions: {
+						plugins: [
+							prefixer({
+								prefix: "#single-spa-application\\:ui",
+							}),
+						],
+					},
+				},
+			},
+		],
+	},
 
-  output: {
-    filename: 'index.js',
-    library: '@xotoboil-multifront/stencil',
-    libraryTarget: 'umd',
-  },
-  externals: {
-    vue: 'vue',
-  },
+	output: {
+		filename: "index.js",
+		library: "@xotoboil-multifront/stencil",
+		libraryTarget: "umd",
+	},
+	externals: {
+		vue: "vue",
+	},
 };
