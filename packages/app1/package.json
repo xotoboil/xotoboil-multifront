@@ -7,8 +7,7 @@
 		"build": "ng build --configuration production",
 		"test": "ng test",
 		"lint": "ng lint",
-		"e2e": "ng e2e",
-		"postinstall": "cp ./patches/schema.json ./node_modules/ngx-build-plus/src/plus-dev-server/schema.json"
+		"e2e": "ng e2e"
 	},
 	"private": true,
 	"dependencies": {
