@@ -9,13 +9,13 @@
     "loader/"
   ],
   "scripts": {
-    "build": "webpack --config config/webpack.prod.js",
-    "start": "webpack-cli serve --config config/webpack.dev.js",
-    "serve": "serve dist",
-    "update:dependencies": "npx ncu -u --target minor",
+    "start": "stencil build --dev --watch --serve",
+    "test:service": "stencil test --spec --e2e",
+    "test:watch": "stencil test --spec --e2e --watchAll",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook",
-    "test:service": "jest ./src --passWithNoTests --maxWorkers=50%"
+    "build": "stencil build --docs",
+    "generate": "stencil generate",
+    "update:dependencies": "npx ncu -u --target minor"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
@@ -42,7 +42,8 @@
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "jsdom": "^20.0.0",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "postcss-loader": "^7.0.1"
   },
   "license": "MIT"
 }

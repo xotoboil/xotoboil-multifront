@@ -2,12 +2,14 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `text`   | `text`    |             | `string` | `undefined` |
 | `type`   | `type`    |             | `string` | `undefined` |
+
 
 ----------------------------------------------
 

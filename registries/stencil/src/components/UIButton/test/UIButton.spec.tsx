@@ -5,14 +5,14 @@ describe("UIButton", () => {
 	it("renders", async () => {
 		const page = await newSpecPage({
 			components: [UIButton],
-			html: `<UIButton></UIButton>`,
+			html: `<ui-button></ui-button>`,
 		});
 		expect(page.root).toEqualHtml(`
-      <UIButton>
+      <ui-button>
         <mock:shadow-root>
         <button class="btn btn-undefined"><slot></slot></button>
         </mock:shadow-root>
-      </UIButton>
+      </ui-button>
     `);
 	});
 });

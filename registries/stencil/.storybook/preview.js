@@ -1,5 +1,5 @@
 import  { defineCustomElements } from '../loader';
-import '!style-loader!css-loader!../../stencil-components/dist/stencil-components/stencil-components.css'
+// import '!style-loader!css-loader!../../stencil-components/dist/stencil-components/stencil-components.css'
 defineCustomElements();
 
 export const parameters = {
