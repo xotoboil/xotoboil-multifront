@@ -9,12 +9,12 @@
 			"**"
 		],
 		"packages": [
-			"packages/**",
-			"registries/**"
+			"packages/*",
+			"registries/*"
 		]
 	},
 	"scripts": {
-		"boot": "yarn initialize && yarn run boot:ui",
+		"boot": "yarn initialize && yarn run boot:ui && yarn run boot:stencil",
 		"boot:ui": "yarn workspace @xotoboil-multifront/ui run build",
 		"boot:stencil": "yarn workspace @xotoboil-multifront/stencil run build",
 		"start": "lerna exec yarn start --parallel",

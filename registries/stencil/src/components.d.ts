@@ -6,36 +6,36 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface UIButton {
+    interface UiButton {
         "text": string | undefined;
         "type": string | undefined;
     }
 }
 declare global {
-    interface HTMLUIButtonElement extends Components.UIButton, HTMLStencilElement {
+    interface HTMLUiButtonElement extends Components.UiButton, HTMLStencilElement {
     }
-    var HTMLUIButtonElement: {
-        prototype: HTMLUIButtonElement;
-        new (): HTMLUIButtonElement;
+    var HTMLUiButtonElement: {
+        prototype: HTMLUiButtonElement;
+        new (): HTMLUiButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "ui-button": HTMLUIButtonElement;
+        "ui-button": HTMLUiButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface UIButton {
+    interface UiButton {
         "text"?: string | undefined;
         "type"?: string | undefined;
     }
     interface IntrinsicElements {
-        "ui-button": UIButton;
+        "ui-button": UiButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ui-button": LocalJSX.UIButton & JSXBase.HTMLAttributes<HTMLUIButtonElement>;
+            "ui-button": LocalJSX.UiButton & JSXBase.HTMLAttributes<HTMLUiButtonElement>;
         }
     }
 }

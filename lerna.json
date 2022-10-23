@@ -1,5 +1,5 @@
 {
-	"packages": ["packages/**"],
+	"packages": ["packages/*"],
 	"useWorkspaces": true,
 	"nohoist": ["**"],
 	"ignoreChanges": ["**/__tests__/**", "**/*.md"],

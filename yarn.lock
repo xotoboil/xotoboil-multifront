@@ -4133,15 +4133,30 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
+"@stencil/angular-output-target@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@stencil/angular-output-target/-/angular-output-target-0.4.0.tgz#6724ed805d50e802f58212d74a71caf442e0b569"
+  integrity sha512-zauaj0za46IWoPgv2IanDp3tiljwDRDNk4jB7WII6KeL66dkk7ffeqYZ0CgySTU5W2FjnKR6JEKbAnwUxjGIsA==
+
 "@stencil/core@^2.13.0":
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.18.1.tgz#f45e99b7abe2a0fa90d3141363601a68df5c08a7"
   integrity sha512-/fXkh1lwZ+X9JQCw50mPjhBogzEHOBvVC5pLoDLZqodVYK0DGWILM2YLV4dcIUBNEK8/HMDpO/Rq81/rS3mNOw==
 
+"@stencil/react-output-target@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@stencil/react-output-target/-/react-output-target-0.3.1.tgz#dc9cc2fea32d0e30474a87fcb2a447f90ab78696"
+  integrity sha512-6d9pPhyajFfdxkqU/pPP2SzI7wn+EklySQc4KXlI/xcdvC2H9BzLmhmR40fR1q2TQoJbJui/nvSWhbYqkE3OBQ==
+
 "@stencil/sass@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@stencil/sass/-/sass-1.5.2.tgz#861dffe90a8d911b6b2af4a36d8928b5264a8646"
   integrity sha512-nJ93pUSylsGsMX0eLmhxh1oEljcUjj5mYjhB9ziCdoaydAdjukrUoqDCC7tdVbOcBo2hKptQyWqCtETnBGYsXQ==
+
+"@stencil/vue-output-target@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@stencil/vue-output-target/-/vue-output-target-0.6.2.tgz#4674cd391f7ae77e250f0159be85d535aacbbdde"
+  integrity sha512-Oh7SLFbOUchCSCbGe/Dqal2xSYPKCFQiVKnvzvS0dsHP/XS7rfHqp3qptW6JCp9lBoo3wmmBurHfldqxhLlnag==
 
 "@storybook/addon-actions@6.5.12", "@storybook/addon-actions@^6.5.9":
   version "6.5.12"
