@@ -2,6 +2,11 @@ import singleSpaVue, {SingleSpaVueLifecycles} from "single-spa-vue";
 import {h, createApp} from "vue";
 import App from "./App.vue";
 import store from "./store";
+import {ComponentLibrary} from "./plugin";
+
+// export * from "./components";
+// export * from "./plugin";
+
 import "./index.scss";
 
 const lifecycles: SingleSpaVueLifecycles = singleSpaVue({
@@ -13,6 +18,7 @@ const lifecycles: SingleSpaVueLifecycles = singleSpaVue({
 	},
 	handleInstance(app: any) {
 		app.use(store);
+		app.use(ComponentLibrary);
 	},
 });
 

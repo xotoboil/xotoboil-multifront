@@ -1,9 +1,9 @@
 {
   "name": "@xotoboil-multifront/ui",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "main": "dist/main.js",
-  "types": "dist/__types__",
+  "types": "dist/types",
   "files": [
     "dist/**/*"
   ],

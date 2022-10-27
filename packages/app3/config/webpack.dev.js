@@ -2,6 +2,7 @@
 
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
+
 /* eslint-disable @typescript-eslint/typedef */
 const {merge} = require("webpack-merge");
 const path = require("path");

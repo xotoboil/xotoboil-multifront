@@ -5,4 +5,4 @@ export * from "./utils/ParseNestedArgs";
 export * from "./plugin/UIPlugin";
 
 // PLUGIN
-export * from "./stories/button/UIButton/UIButton.vue";
+export * from "./components/button/UIButton/UIButton.vue";

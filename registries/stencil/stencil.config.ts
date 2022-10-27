@@ -22,6 +22,7 @@ export const config: Config = {
 		vueOutputTarget({
 			componentCorePackage: "@xotoboil-multifront/stencil",
 			proxiesFile: "./lib/vue/vue-proxy/components.ts",
+			includeDefineCustomElements: true,
 		}),
 		angularOutputTarget({
 			componentCorePackage: "@xotoboil-multifront/stencil",

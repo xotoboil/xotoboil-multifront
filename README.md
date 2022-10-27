@@ -8,7 +8,7 @@ When starting out with a project, it is often said that the monorepo architectur
 
 However, if you do decide to go this route, over time, with a fast growing company, there are a variety of challenges if you aren't careful about the way you define and structure your project's root architecture.
 
-A couple of examples for these challenges can include … 🤔
+A couple of examples for these challenges can include ... 🤔
 At the very top of the list, build time! Followed by a spider web of imports at the second place! Having to deal with placing all of your ci-cl jobs on a single pipeline comes third… Hoist issues on all those dependencies you added in package.json 😮 Oh, and I almost forgot about not being able to benefit from multiple frameworks!
 
 Anyways, you get where this is going. These issues can also bring frustration to your team later down the road and delay that brand-new feature you’ve been trying to add. The idea behind this boiler-plate is not to say that one architecture is better than the other, as MSA still has its own set of complexities. Such as, long meetings defining protocols between teams, waiting for other teams to start working on a specific feature, models, types, and a high bill from your favorite cloud provider! AAAH! So what do we do? And can we merge the two to help us build faster services?
@@ -29,7 +29,6 @@ I hope you like this repo, there are always room for improvements, but it's avai
 ```shell 
 yarn boot # to install all deps
 yarn start # to start full app
-
 yarn start:shell # to run shell - (required)
 yarn start:portal # to run portal - (required)
 yarn start:app1 # to run app1 - (micro service)

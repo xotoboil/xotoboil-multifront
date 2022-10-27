@@ -9,12 +9,10 @@
 		"types": ["node", "jest"],
 		"strict": true,
 		"jsx": "react",
-		"paths": {
-			"@/*":["src/*"]
-		},
+		"paths": {"@/*":["src/*"]},
 		"noImplicitAny": false,
 		"declaration": true,
-		"declarationDir": "dist/__types__"
+		"declarationDir": "dist/types"
 	},
 	"include": ["src/**/*"]
 }

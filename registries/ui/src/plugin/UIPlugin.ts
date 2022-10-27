@@ -1,5 +1,5 @@
 //@ts-ignore
-import UIButton from "../stories/button/UIButton/UIButton.vue";
+import UIButton from "../components/button/UIButton/UIButton.vue";
 
 export const UIPlugin = {
 	install: (app: any) => {
