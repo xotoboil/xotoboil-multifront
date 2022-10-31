@@ -9,6 +9,7 @@ __webpack_base_uri__ = "http://localhost:8082";
 
 const prodConfig = {
 	mode: "production",
+	entry: path.resolve(process.cwd(), "src/App.tsx"),
 
 	output: {
 		path: path.resolve(process.cwd(), "dist"),
