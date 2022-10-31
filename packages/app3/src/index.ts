@@ -2,7 +2,7 @@ import singleSpaVue, {SingleSpaVueLifecycles} from "single-spa-vue";
 import {h, createApp} from "vue";
 import App from "./App.vue";
 import store from "./store";
-import {ComponentLibrary} from "./plugin";
+import {ComponentLibrary} from "@xotoboil-multifront/ui-vue";
 
 // export * from "./components";
 // export * from "./plugin";

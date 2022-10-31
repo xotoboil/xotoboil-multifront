@@ -52,4 +52,9 @@ module.exports = {
 			template: "./src/index.html",
 		}),
 	],
+	optimization: {
+		splitChunks: {
+			chunks: 'async'
+		  }
+	}
 };

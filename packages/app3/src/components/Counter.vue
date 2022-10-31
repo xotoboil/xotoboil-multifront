@@ -3,7 +3,7 @@
 		<h1>vue app3</h1>
 		<h2>Local Counter {{ counter }}</h2>
 		<h2>Global Counter {{ globalEventDistributor.globalStore.counter }}</h2>
-		<UIButton @click="increment">increment</UIButton>
+		<ui-button @click="increment">increment</ui-button>
 		<ui-button @click="globalEventDistributor.globalStore.counter++">increment global</ui-button>
 	</div>
 </template>
@@ -13,10 +13,9 @@ import store from '../store';
 import { Prop, Options,  Watch } from "vue-property-decorator";
 import { Vue } from "vue-class-component";
 
-import {UIButton} from "@xotoboil-multifront/stencil"
-// import {UIButton} from "@xotoboil-multifront/ui"
+import {UiButton} from "@xotoboil-multifront/ui-vue"
 
-@Options({name: "Counter", components: {UIButton}})
+@Options({name: "Counter", components: {UiButton}})
 export default class Counter extends Vue {
 	@Prop()
 	globalEventDistributor: any;

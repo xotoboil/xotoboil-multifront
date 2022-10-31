@@ -1,0 +1,23 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"experimentalDecorators": true,
+		"types": ["node", "jest"],
+		"strict": false,
+		"jsx": "react",
+		"paths": {"@/*":["src/*"]},
+		"noImplicitAny": false,
+		"declaration": true,
+		"declarationDir": "dist/types",
+		"lib": ["dom", "es2020"],
+		"module": "es2015",
+		"moduleResolution": "node",
+		"target": "es2017",
+		"skipLibCheck": true
+	},
+	"include": ["src/**/*"]
+}
