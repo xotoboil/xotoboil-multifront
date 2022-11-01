@@ -17,7 +17,6 @@ const devConfig = {
 		},
 		liveReload: true,
 	},
-
 };
 
 module.exports = merge(commonConfig, devConfig);

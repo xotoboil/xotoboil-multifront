@@ -6,14 +6,16 @@ import {globalEventDistributor} from "src/single-spa/single-spa-props";
 import {Store} from "@ngrx/store";
 import {CounterState} from "src/app/models/CounterModels";
 
+import {UiButton} from "@xotoboil-multifront/ui-angular"
+
 @Component({
 	selector: "app-counter",
 	template: `
 		<div>
 			<h2>Local Counter: {{ counterCurrent | async }}</h2>
 			<h2>Global Counter: {{ globalStore ? globalStore.counter : 0 }}</h2>
-			<button (click)="actions.increment()">increment</button>
-			<button (click)="actions.incrementGlobal()">increment global</button>
+			<ui-button (click)="actions.increment()">increment</ui-button>
+			<ui-button (click)="actions.incrementGlobal()">increment global</ui-button>
 		</div>
 	`,
 })

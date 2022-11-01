@@ -1,15 +1,14 @@
 {
-    "name": "@xotoboil-multifront/ui-vue",
-    "version": "0.0.1",
-   "main": "lib/index.js",
-   "types": "lib/index.d.ts",
-      
-   "scripts": {
-        "start":"echo ok",
-        "build": "npm run tsc",
-        "tsc": "tsc -p ."
-   },
-   "dependencies": {
-        "vue": "^3.0.0"
-   }
+	"name": "@xotoboil-multifront/ui-vue",
+	"version": "0.0.1",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"start": "echo ok",
+		"build": "npm run tsc",
+		"tsc": "tsc -p ."
+	},
+	"dependencies": {
+		"vue": "^3.0.0"
+	}
 }

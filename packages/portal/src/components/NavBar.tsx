@@ -9,7 +9,6 @@ export const NavBar: any = (): JSX.Element => (
 					Home
 				</a>
 			</li>
-
 			&nbsp;|&nbsp;
 			<li style={{display: "inline"}}>
 				<a href="/angular" onClick={navigateToUrl}>

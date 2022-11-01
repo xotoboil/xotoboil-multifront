@@ -6,5 +6,5 @@ module.exports = {
 	semi: true,
 	useTabs: true,
 	jsxBracketSameLine: false,
-	htmlWhitespaceSensitivity: "ignore"
+	htmlWhitespaceSensitivity: "ignore",
 };

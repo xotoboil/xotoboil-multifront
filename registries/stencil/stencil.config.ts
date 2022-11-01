@@ -25,12 +25,12 @@ export const config: Config = {
 		}),
 		angularOutputTarget({
 			componentCorePackage: "@xotoboil-multifront/stencil",
-			directivesProxyFile: "./lib/angular/stencil-generated/components.ts",
-			directivesArrayFile: "./lib/angular/stencil-generated/index.ts",
+			directivesProxyFile: "../ui-angular/src/components.ts",
+			directivesArrayFile: "../ui-angular/src/index.ts",
 		}),
 		reactOutputTarget({
 			componentCorePackage: "@xotoboil-multifront/stencil",
-			proxiesFile: "./lib/react/stencil-generated/index.ts",
+			proxiesFile: "../ui-react/src/index.ts",
 			includeDefineCustomElements: true,
 		}),
 	],

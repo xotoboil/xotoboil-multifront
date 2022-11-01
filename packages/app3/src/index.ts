@@ -4,9 +4,6 @@ import App from "./App.vue";
 import store from "./store";
 import {ComponentLibrary} from "@xotoboil-multifront/ui-vue";
 
-// export * from "./components";
-// export * from "./plugin";
-
 import "./index.scss";
 
 const lifecycles: SingleSpaVueLifecycles = singleSpaVue({

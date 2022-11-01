@@ -1,0 +1,20 @@
+{
+	"name": "@xotoboil-multifront/ui-react",
+	"version": "0.0.1",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"start": "echo ok",
+		"build": "npm run tsc",
+		"tsc": "tsc -p ."
+	},
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@types/react-dom": "^18.0.8",
+		"@types/react": "^18.0.24",
+		"@types/node": "^16.11.6"
+	}
+}
