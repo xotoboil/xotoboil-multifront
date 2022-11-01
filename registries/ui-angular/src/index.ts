@@ -1,6 +1,8 @@
+import {NgModule} from "@angular/core";
+import {DIRECTIVES} from "./directives";
 
-import * as d from './components';
-
-export const DIRECTIVES = [
-  d.UiButton
-];
+@NgModule({
+	declarations: [...DIRECTIVES],
+	exports: [...DIRECTIVES],
+})
+export class UiLibrary {}

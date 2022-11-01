@@ -26,7 +26,7 @@ export const config: Config = {
 		angularOutputTarget({
 			componentCorePackage: "@xotoboil-multifront/stencil",
 			directivesProxyFile: "../ui-angular/src/components.ts",
-			directivesArrayFile: "../ui-angular/src/index.ts",
+			directivesArrayFile: "../ui-angular/src/directives.ts",
 		}),
 		reactOutputTarget({
 			componentCorePackage: "@xotoboil-multifront/stencil",
