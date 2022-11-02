@@ -14,8 +14,11 @@
 		]
 	},
 	"scripts": {
-		"boot": "yarn initialize && yarn run boot:ui && yarn run boot:stencil",
+		"boot": "yarn initialize && yarn run boot:ui && yarn run boot:stencil && yarn boot:ui-react && yarn boot:ui-vue && yarn boot:ui-angular",
 		"boot:ui": "yarn workspace @xotoboil-multifront/ui run build",
+		"boot:ui-react": "yarn workspace @xotoboil-multifront/ui-react run build",
+		"boot:ui-vue": "yarn workspace @xotoboil-multifront/ui-vue run build",
+		"boot:ui-angular": "yarn workspace @xotoboil-multifront/ui-angular run build",
 		"boot:stencil": "yarn workspace @xotoboil-multifront/stencil run build",
 		"start": "lerna exec yarn start --parallel",
 		"build": "lerna exec yarn build --parallel",

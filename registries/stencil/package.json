@@ -11,7 +11,8 @@
 		"loader/"
 	],
 	"scripts": {
-		"start": "stencil build --dev --watch --serve",
+    "start": "echo ok",
+		"watch": "stencil build --dev --watch --serve",
 		"test:service": "stencil test --spec --e2e",
 		"test:watch": "stencil test --spec --e2e --watchAll",
 		"storybook": "start-storybook -p 6006",
