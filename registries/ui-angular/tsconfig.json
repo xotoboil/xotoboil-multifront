@@ -1,19 +1,35 @@
 {
+	"compileOnSave": false,
 	"compilerOptions": {
-		"declaration": true,
-		"noImplicitAny": false,
-		"removeComments": true,
-		"noLib": false,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"sourceMap": true,
-		"outDir": "./lib",
-		"lib": ["dom", "es2020"],
-		"module": "es2015",
-		"moduleResolution": "node",
-		"target": "es2017",
-		"skipLibCheck": true
+	  "baseUrl": "./",
+	  "outDir": "./lib",
+	  "forceConsistentCasingInFileNames": true,
+	  "strict": true,
+	  "noImplicitOverride": true,
+	  "noPropertyAccessFromIndexSignature": true,
+	  "noImplicitReturns": true,
+	  "noFallthroughCasesInSwitch": true,
+	  "sourceMap": true,
+	  "downlevelIteration": true,
+	  "experimentalDecorators": true,
+	  "moduleResolution": "node",
+	  "importHelpers": true,
+	  "target": "es2020",
+	  "module": "es2020",
+	  "lib": [
+		"es2020",
+		"dom"
+	  ],
+	  "declaration": true,
+	  "declarationMap": true,
+	  "inlineSources": true,
+	  "types": []
 	},
-	"include": ["./src/**/*.ts"],
-	"exclude": ["node_modules", "**/*.spec.ts", "**/__tests__/**"]
-}
+	"angularCompilerOptions": {
+	  "enableI18nLegacyMessageIdFormat": false,
+	  "strictInjectionParameters": true,
+	  "strictInputAccessModifiers": true,
+	  "strictTemplates": true
+	}
+  }
+  

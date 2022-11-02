@@ -6,3 +6,6 @@ import {DIRECTIVES} from "./directives";
 	exports: [...DIRECTIVES],
 })
 export class UiLibrary {}
+
+
+export * from './components';
