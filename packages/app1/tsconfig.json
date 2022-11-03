@@ -13,6 +13,11 @@
 		"target": "es2015",
 		"module": "es2020",
 		"lib": ["es2018", "dom"],
-		"strict": false
+		"strict": false,
+		"paths": {
+			"@angular/*": [
+			  "./node_modules/@angular/*"
+			]
+		}
 	}
 }
