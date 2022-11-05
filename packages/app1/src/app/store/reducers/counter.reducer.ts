@@ -3,17 +3,20 @@ import { COUNTER_KEY } from "@/app/enums/CounterEnums";
 import { CounterState } from "@/app/models/CounterModel";
 import { ActionTypes } from "../actions/counter.actions";
 
-export const counterState = +localStorage.getItem(COUNTER_KEY) ?? 0;
+export let counterState = +localStorage.getItem(COUNTER_KEY) ?? 0;
 
 export function counterReducer(counter: number = counterState, action: Action): number {
 	switch (action.type) {
 		case ActionTypes.IncrementCounter:
+			counterState++;
 			localStorage.setItem(COUNTER_KEY, (counter + 1).toString());
 			return counter + 1;
 		case ActionTypes.DecrementCounter:
+			counterState--;
 			localStorage.setItem(COUNTER_KEY, (counter - 1).toString());
 			return counter - 1;
 		case ActionTypes.ResetCounter:
+			counterState = 0;
 			localStorage.setItem(COUNTER_KEY, "0");
 			return counterState;
 		default:

@@ -3,6 +3,7 @@ import { h, createApp } from "vue";
 import App from "./App.vue";
 import store from "./store";
 import { ComponentLibrary } from "@xotoboil-multifront/ui-vue";
+import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
 import "./index.scss";
 
@@ -19,15 +20,15 @@ const lifecycles: SingleSpaVueLifecycles = singleSpaVue({
 	},
 });
 
-export const bootstrap: any = function (props: any) {
+export const bootstrap: any = function (props: { globalEventDistributor: GlobalEventDistributor }) {
 	return lifecycles.bootstrap(props);
 };
 
-export const mount: any = function (props: any) {
+export const mount: any = function (props: { globalEventDistributor: GlobalEventDistributor }) {
 	return lifecycles.mount(props);
 };
 
-export const unmount: any = function (props: any) {
+export const unmount: any = function (props: { globalEventDistributor: GlobalEventDistributor }) {
 	return lifecycles.unmount(props);
 };
 

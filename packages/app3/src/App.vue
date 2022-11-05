@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Counter from "./components/Counter.vue";
-import { GlobalEventDistributerModel } from "@/models/GlobalEventDistributerModel";
+import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 import { Vue } from "vue-class-component";
 
 import { Model, Options, Prop } from "vue-property-decorator";
@@ -16,6 +16,6 @@ import store from "./store";
 })
 export default class App extends Vue {
 	@Prop()
-	globalEventDistributor: GlobalEventDistributerModel;
+	globalEventDistributor!: GlobalEventDistributor;
 }
 </script>

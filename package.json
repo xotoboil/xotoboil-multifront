@@ -14,10 +14,11 @@
 		]
 	},
 	"scripts": {
-		"boot": "yarn initialize && yarn run boot:ui && yarn boot:ui-react && yarn boot:ui-vue && yarn boot:ui-angular",
+		"boot": "yarn initialize && yarn boot:common && yarn run boot:ui && yarn boot:ui-react && yarn boot:ui-vue && yarn boot:ui-angular",
 		"boot:ui-react": "yarn workspace @xotoboil-multifront/ui-react run build",
 		"boot:ui-vue": "yarn workspace @xotoboil-multifront/ui-vue run build",
 		"boot:ui-angular": "yarn workspace @xotoboil-multifront/ui-angular run build",
+		"boot:common": "yarn workspace @xotoboil-multifront/common run build",
 		"boot:ui": "yarn workspace @xotoboil-multifront/ui run build",
 		"start": "yarn workspaces foreach run start",
 		"build": "yarn workspaces foreach run build",

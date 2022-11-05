@@ -2,10 +2,13 @@
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const prefixer = require("postcss-prefix-selector");
-
+const path = require("path");
 module.exports = {
 	resolve: {
 		extensions: [".js", ".tsx", ".jsx", ".ts"],
+		alias: {
+			"@": path.join(process.cwd(), "src"),
+		},
 	},
 
 	module: {

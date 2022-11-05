@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 
 import { start, registerApplication } from "single-spa";
-import { GlobalEventDistributor } from "./events/globalEvents";
+import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 const globalEventDistributor: GlobalEventDistributor = new GlobalEventDistributor();
 
 /**
