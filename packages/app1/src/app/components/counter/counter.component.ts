@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { globalEventDistributor } from "../../../single-spa/single-spa-props";
 import { select, Store } from "@ngrx/store";
-import { CounterState } from "@/app/models/CounterModel";
+import { CounterModel } from "@/app/models/CounterModel";
 import { selectCounter } from "@/app/store/reducers/counter.reducer";
 import { DecrementCounter, IncrementCounter, ResetCounter } from "@/app/store/actions/counter.actions";
 import { GlobalEventDistributor } from "@xotoboil-multifront/common";
@@ -22,7 +22,7 @@ export class CounterComponent implements OnInit {
 	public localCounter: Observable<number>;
 	public globalEventDistributor: GlobalEventDistributor;
 
-	constructor(private store: Store<CounterState>) {
+	constructor(private store: Store<CounterModel>) {
 		if (globalEventDistributor && globalEventDistributor.globalStore) this.globalEventDistributor = globalEventDistributor;
 	}
 
