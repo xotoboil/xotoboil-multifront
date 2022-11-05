@@ -1,19 +1,19 @@
 import { Action, createSelector } from "@ngrx/store";
 import { COUNTER_KEY } from "src/app/enums/CounterEnums";
-import { CounterState } from "src/app/models/CounterModels";
+import { CounterState } from "src/app/models/CounterModel";
 import { ActionTypes } from "../actions/counter.actions";
 
 export const counterState = +localStorage.getItem(COUNTER_KEY) ?? 0;
 
 export function counterReducer(counter: number = counterState, action: Action): number {
 	switch (action.type) {
-		case ActionTypes.Increment:
+		case ActionTypes.IncrementCounter:
 			localStorage.setItem(COUNTER_KEY, (counter + 1).toString());
 			return counter + 1;
-		case ActionTypes.Decrement:
+		case ActionTypes.DecrementCounter:
 			localStorage.setItem(COUNTER_KEY, (counter - 1).toString());
 			return counter - 1;
-		case ActionTypes.Reset:
+		case ActionTypes.ResetCounter:
 			localStorage.setItem(COUNTER_KEY, "0");
 			return counterState;
 		default:
@@ -22,6 +22,4 @@ export function counterReducer(counter: number = counterState, action: Action): 
 }
 
 export const selectFeature = (state: CounterState) => state.counter;
-export const selectCount = createSelector(selectFeature, (s) => {
-	return s;
-});
+export const selectCounter = createSelector(selectFeature, (e) => e);

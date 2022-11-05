@@ -1,3 +1,5 @@
-export function counterAddIncrement(state: { counter: number }) {
-	state.counter++;
+import { CounterModel } from "@/models/CounterModel";
+
+export function counterAddIncrement(state: CounterModel) {
+	state.counter + 1;
 }

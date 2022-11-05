@@ -1,47 +1,48 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { Decrement, Increment, Reset } from "../../store/actions/counter.actions";
 import { globalEventDistributor } from "../../../single-spa/single-spa-props";
 import { select, Store } from "@ngrx/store";
-import { CounterState } from "src/app/models/CounterModels";
-import { selectCount } from "src/app/store/reducers/counter.reducer";
+import { CounterState } from "@/app/models/CounterModel";
+import { selectCounter } from "@/app/store/reducers/counter.reducer";
+import { DecrementCounter, IncrementCounter, ResetCounter } from "@/app/store/actions/counter.actions";
+import { GlobalEventDistributerModel } from "@/app/models/GlobalStoreModel";
 
 @Component({
 	selector: "app-counter",
 	template: `
 		<div>
-			<h2>Local Counter: {{ count ? (count | async) : 0 }}</h2>
-			<h2>Global Counter: {{ globalStore ? globalStore.counter : 0 }}</h2>
-			<ui-button (click)="increment()">increment</ui-button>
-			<ui-button (click)="incrementGlobal()">increment global</ui-button>
+			<h2>Local Counter: {{ localCounter ? (localCounter | async) : 0 }}</h2>
+			<h2>Global Counter: {{ globalEventDistributor.globalStore ? globalEventDistributor.globalStore.counter : 0 }}</h2>
+			<ui-button (click)="incrementCounter()">incrementCounter</ui-button>
+			<ui-button (click)="incrementCounterGlobal()">incrementCounter global</ui-button>
 		</div>
 	`,
 })
 export class CounterComponent implements OnInit {
-	public count: Observable<number>;
-	public globalStore: any;
+	public localCounter: Observable<number>;
+	public globalEventDistributor: GlobalEventDistributerModel;
 
 	constructor(private store: Store<CounterState>) {
-		if (globalEventDistributor) this.globalStore = globalEventDistributor.globalStore;
+		if (globalEventDistributor && globalEventDistributor.globalStore) this.globalEventDistributor = globalEventDistributor;
 	}
 
 	ngOnInit(): void {
-		this.count = this.store.pipe(select(selectCount));
+		this.localCounter = this.store.pipe(select(selectCounter));
 	}
 
-	increment(): void {
-		this.store.dispatch(new Increment());
+	incrementCounter(): void {
+		this.store.dispatch(new IncrementCounter());
 	}
 
-	decrement(): void {
-		this.store.dispatch(new Decrement());
+	decrementCounter(): void {
+		this.store.dispatch(new DecrementCounter());
 	}
 
-	reset(): void {
-		this.store.dispatch(new Reset());
+	resetCounter(): void {
+		this.store.dispatch(new ResetCounter());
 	}
 
-	incrementGlobal(): void {
-		if (globalEventDistributor && globalEventDistributor.globalStore) globalEventDistributor.globalStore.counter++;
+	incrementCounterGlobal(): void {
+		if (globalEventDistributor && globalEventDistributor.globalStore) globalEventDistributor.globalStore.counter + 1;
 	}
 }

@@ -1,10 +1,9 @@
-/* eslint-disable prettier/prettier */
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { CounterComponent } from "./counter.component";
 import { StoreModule } from "@ngrx/store";
-import { rootReducer } from "src/app/store/root-reducer";
-import { Decrement, Increment, Reset } from "src/app/store/actions/counter.actions";
+import { rootReducer } from "@/app/store/root-reducer";
+import { DecrementCounter, IncrementCounter, ResetCounter } from "src/app/store/actions/counter.actions";
 
 describe("CounterComponent", () => {
 	let component: CounterComponent;
@@ -30,38 +29,38 @@ describe("CounterComponent", () => {
 	});
 
 	describe("ngOnInit", () => {
-		it("should set count selector value", (done) => {
+		it("should set localCounter selector value", (done) => {
 			component.ngOnInit();
-			expect(component.count).toBeDefined();
-			component.count.subscribe((count) => {
-				expect(count).toBe(0);
+			expect(component.localCounter).toBeDefined();
+			component.localCounter.subscribe((localCounter) => {
+				expect(localCounter).toBe(0);
 				done();
 			});
 		});
 	});
 
-	describe("increment", () => {
-		it("should dispatch the Increment action", () => {
+	describe("incrementCounter", () => {
+		it("should dispatch the IncrementCounter action", () => {
 			const fnDispatch = spyOn(component["store"], "dispatch");
 			component.ngOnInit();
-			component.increment();
-			expect(fnDispatch).toHaveBeenCalledWith(new Increment());
+			component.incrementCounter();
+			expect(fnDispatch).toHaveBeenCalledWith(new IncrementCounter());
 		});
 	});
 
-	describe("decrement", () => {
-		it("should dispatch the Decrement action", () => {
+	describe("decrementCounter", () => {
+		it("should dispatch the DecrementCounter action", () => {
 			const fnDispatch = spyOn(component["store"], "dispatch");
-			component.decrement();
-			expect(fnDispatch).toHaveBeenCalledWith(new Decrement());
+			component.decrementCounter();
+			expect(fnDispatch).toHaveBeenCalledWith(new DecrementCounter());
 		});
 	});
 
 	describe("reset", () => {
 		it("should dispatch the Reset action", () => {
 			const fnDispatch = spyOn(component["store"], "dispatch");
-			component.reset();
-			expect(fnDispatch).toHaveBeenCalledWith(new Reset());
+			component.resetCounter();
+			expect(fnDispatch).toHaveBeenCalledWith(new ResetCounter());
 		});
 	});
 });

@@ -1,19 +1,19 @@
 import { Action } from "@ngrx/store";
 
 export enum ActionTypes {
-	Increment = "[Counter] Increment",
-	Decrement = "[Counter] Decrement",
-	Reset = "[Counter] Reset",
+	IncrementCounter = "[Counter] IncrementCounter",
+	DecrementCounter = "[Counter] DecrementCounter",
+	ResetCounter = "[Counter] ResetCounter",
 }
 
-export class Increment implements Action {
-	readonly type = ActionTypes.Increment;
+export class IncrementCounter implements Action {
+	readonly type = ActionTypes.IncrementCounter;
 }
 
-export class Decrement implements Action {
-	readonly type = ActionTypes.Decrement;
+export class DecrementCounter implements Action {
+	readonly type = ActionTypes.DecrementCounter;
 }
 
-export class Reset implements Action {
-	readonly type = ActionTypes.Reset;
+export class ResetCounter implements Action {
+	readonly type = ActionTypes.ResetCounter;
 }

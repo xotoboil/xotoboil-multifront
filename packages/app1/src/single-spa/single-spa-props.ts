@@ -1,9 +1,10 @@
+import { GlobalEventDistributerModel } from "@/app/models/GlobalStoreModel";
 import { ReplaySubject } from "rxjs";
 import { AppProps } from "single-spa";
 
 export const singleSpaPropsSubject: ReplaySubject<SingleSpaProps> = new ReplaySubject<SingleSpaProps>(1);
 
-export let globalEventDistributor: Record<string, any>;
+export let globalEventDistributor: GlobalEventDistributerModel;
 
 singleSpaPropsSubject.subscribe((data: any) => {
 	if (data && data.globalEventDistributor) globalEventDistributor = data.globalEventDistributor;
@@ -15,5 +16,5 @@ singleSpaPropsSubject.subscribe((data: any) => {
  */
 
 export type SingleSpaProps = AppProps & {
-	globalEventDistributor: Record<string, any>;
+	globalEventDistributor: GlobalEventDistributerModel;
 };

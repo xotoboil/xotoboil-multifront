@@ -1,9 +1,7 @@
-class GlobalStore {
-	counter: number = 0;
-}
+import { GlobalStoreModel } from "src/models/GlobalStoreModel";
 
 export class GlobalEventDistributor {
-	globalStore: GlobalStore = new GlobalStore();
+	globalStore: GlobalStoreModel = new GlobalStoreModel();
 
 	handlerList: { event: string; callback: Function }[] = [];
 

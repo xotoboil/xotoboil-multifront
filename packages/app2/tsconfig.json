@@ -3,10 +3,14 @@
 	"compilerOptions": {
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
+		"baseUrl": ".",
 		"sourceMap": true,
 		"strict": true,
 		"types": ["jest", "node", "react-dom", "react"],
-		"jsx": "react"
+		"jsx": "react",
+		"paths": {
+			"@/*": ["src/*"]
+		},
 	},
 	"include": ["src/**/*"]
 }

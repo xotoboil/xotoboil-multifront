@@ -5,12 +5,12 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "src/environments/environment";
-import { rootReducer } from "./store/root-reducer";
+import { rootReducer } from "@/store/root-reducer";
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { CounterModule } from "./components/counter/counter.module";
-import { EmptyRouteComponent } from "./pages/empty-route/empty-route-component";
+import { AppRoutingModule } from "@/app-routing.module";
+import { AppComponent } from "@/app.component";
+import { CounterModule } from "@/components/counter/counter.module";
+import { EmptyRouteComponent } from "@/pages/empty-route/empty-route-component";
 
 @NgModule({
 	declarations: [AppComponent, EmptyRouteComponent],

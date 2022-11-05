@@ -5,8 +5,9 @@ import singleSpaReact from "single-spa-react";
 import { Counter } from "./components/counter/Counter";
 import store from "./store/index";
 import "./index.scss";
+import { GlobalEventDistributerModel } from "./models/GlobalStoreModel";
 
-export let globalEventDistributor: Record<string, any>;
+export let globalEventDistributor: GlobalEventDistributerModel;
 
 export const App: any = (props: any): JSX.Element => (
 	<div>
