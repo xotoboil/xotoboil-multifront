@@ -3,10 +3,10 @@ import { Component, Host, Prop, h } from "@stencil/core";
 
 @Component({
 	tag: "ui-button",
-	styleUrl: "UIButton.scss",
+	styleUrl: "UiButton.scss",
 	shadow: true,
 })
-export class UIButton {
+export class UiButton {
 	@Prop() text: string | undefined;
 	@Prop() type: string | undefined;
 

@@ -1,10 +1,10 @@
 import { newSpecPage } from "@stencil/core/testing";
-import { UIButton } from "../UIButton";
+import { UiButton } from "../UiButton";
 
-describe("UIButton", () => {
+describe("UiButton", () => {
 	it("renders", async () => {
 		const page = await newSpecPage({
-			components: [UIButton],
+			components: [UiButton],
 			html: `<ui-button></ui-button>`,
 		});
 		expect(page.root).toEqualHtml(`

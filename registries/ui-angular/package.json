@@ -1,6 +1,6 @@
 {
 	"name": "@xotoboil-multifront/ui-angular",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"main": "lib/esm2020/index.mjs",
 	"types": "lib/index.d.ts",
 	"scripts": {

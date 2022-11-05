@@ -4,4 +4,4 @@ export { Components, JSX } from "./components";
 export * from "./utils/ParseNestedArgs";
 
 // PLUGIN
-export * from "./components/button/UIButton/UIButton";
+export * from "./components/button/UiButton/UiButton";
