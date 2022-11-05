@@ -9,8 +9,8 @@
 		"types": ["jest", "node", "react-dom", "react"],
 		"jsx": "react",
 		"paths": {
-			"@/*": ["src/*"]
-		},
+			"@/*": ["./src/*"]
+		}
 	},
 	"include": ["src/**/*"]
 }

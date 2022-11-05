@@ -12,14 +12,14 @@
 import store from "../store";
 import { Prop, Options, Watch } from "vue-property-decorator";
 import { Vue } from "vue-class-component";
-import { GlobalEventDistributerModel } from "@/models/GlobalEventDistributerModel";
+import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
 import { UiButton } from "@xotoboil-multifront/ui-vue";
 
 @Options({ name: "Counter", components: { UiButton } })
 export default class Counter extends Vue {
 	@Prop()
-	globalEventDistributor: GlobalEventDistributerModel;
+	globalEventDistributor!: GlobalEventDistributor;
 
 	get counter() {
 		return store.state.counter;

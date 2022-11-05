@@ -5,7 +5,7 @@ import { select, Store } from "@ngrx/store";
 import { CounterState } from "@/app/models/CounterModel";
 import { selectCounter } from "@/app/store/reducers/counter.reducer";
 import { DecrementCounter, IncrementCounter, ResetCounter } from "@/app/store/actions/counter.actions";
-import { GlobalEventDistributerModel } from "@/app/models/GlobalStoreModel";
+import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
 @Component({
 	selector: "app-counter",
@@ -20,7 +20,7 @@ import { GlobalEventDistributerModel } from "@/app/models/GlobalStoreModel";
 })
 export class CounterComponent implements OnInit {
 	public localCounter: Observable<number>;
-	public globalEventDistributor: GlobalEventDistributerModel;
+	public globalEventDistributor: GlobalEventDistributor;
 
 	constructor(private store: Store<CounterState>) {
 		if (globalEventDistributor && globalEventDistributor.globalStore) this.globalEventDistributor = globalEventDistributor;
@@ -43,6 +43,6 @@ export class CounterComponent implements OnInit {
 	}
 
 	incrementCounterGlobal(): void {
-		if (globalEventDistributor && globalEventDistributor.globalStore) globalEventDistributor.globalStore.counter + 1;
+		if (globalEventDistributor && globalEventDistributor.globalStore) globalEventDistributor.globalStore.counter += 1;
 	}
 }

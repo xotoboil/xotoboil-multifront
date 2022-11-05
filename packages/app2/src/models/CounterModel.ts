@@ -1,3 +1,5 @@
 export interface CounterModel {
-	counter: number;
+	counter: {
+		counter: number;
+	};
 }

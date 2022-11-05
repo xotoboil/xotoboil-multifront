@@ -1,0 +1,17 @@
+{
+	"$schema": "https://turborepo.org/schema.json",
+	"pipeline": {
+		"serve:dist": {},
+		"build:standalone": {},
+		"update:dependencies": {},
+		"generate:graphql-types": {},
+		"build": {
+			"dependsOn": ["^build"],
+			"cache": true,
+			"outputs": ["dist/**", "lib/**"]
+		},
+		"start": {
+			"dependsOn": ["^build"]
+		}
+	}
+}

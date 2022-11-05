@@ -1,7 +1,7 @@
 import { combineReducers, createStore, Store } from "redux";
 import { globalEventDistributor } from "@/App";
 import { counterReducer } from "@/store/reducers/counter.reducer";
-import { GlobalEventDistributerModel } from "@/models/GlobalStoreModel";
+import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
 const store: Store<any, any> = createStore(
 	combineReducers({
@@ -9,6 +9,6 @@ const store: Store<any, any> = createStore(
 	}),
 );
 
-export const getGlobalEventDistributer: Function = () => globalEventDistributor as GlobalEventDistributerModel;
+export const getGlobalEventDistributer: Function = () => globalEventDistributor as GlobalEventDistributor;
 
 export default store;
