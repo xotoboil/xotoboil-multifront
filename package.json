@@ -20,8 +20,8 @@
 		"boot:ui-angular": "yarn workspace @xotoboil-multifront/ui-angular run build",
 		"boot:common": "yarn workspace @xotoboil-multifront/common run build",
 		"boot:ui": "yarn workspace @xotoboil-multifront/ui run build",
-		"start": "yarn workspaces foreach run start",
-		"build": "yarn workspaces foreach run build",
+		"start": "turbo run start --filter=./packages/*",
+		"build": "turbo run build --filter=./packages/*",
 		"start:shell": "yarn workspace @xotoboil-multifront/shell run start",
 		"start:portal": "yarn workspace @xotoboil-multifront/portal run start",
 		"start:app1": "yarn workspace @xotoboil-multifront/app1 run start",
@@ -56,6 +56,7 @@
 		"stylelint-order": "^5.0.0",
 		"stylelint-scss": "^4.0.0",
 		"ts-jest": "^27.0.7",
+		"turbo": "^1.6.3",
 		"typescript": "^4.8.4"
 	}
 }
