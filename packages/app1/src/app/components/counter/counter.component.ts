@@ -13,8 +13,8 @@ import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 		<div>
 			<h2>Local Counter: {{ localCounter ? (localCounter | async) : 0 }}</h2>
 			<h2>Global Counter: {{ globalEventDistributor.globalStore ? globalEventDistributor.globalStore.counter : 0 }}</h2>
-			<ui-button (click)="incrementCounter()">incrementCounter</ui-button>
-			<ui-button (click)="incrementCounterGlobal()">incrementCounter global</ui-button>
+			<ui-button (click)="incrementCounter()">increment</ui-button>
+			<ui-button (click)="incrementCounterGlobal()">increment global</ui-button>
 		</div>
 	`,
 })

@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+.turbo
 
 *~
 *.sw[mnpcod]

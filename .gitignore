@@ -20,7 +20,9 @@ node_modules/
 .DS_Store
 
 # Generated
-/dist/
-/coverage/
-/build/
+**/dist/
+**/coverage/
+**/build/
 **/lib/
+
+.turbo
