@@ -34,9 +34,7 @@
 		"test": "yarn workspace @xotoboil-multifront/* run test",
 		"test:e2e": "yarn workspace @xotoboil-multifront/* run test:e2e"
 	},
-	"dependencies": {
-		"lerna": "^4.0.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^27.0.2",
 		"@types/node": "^16.11.6",

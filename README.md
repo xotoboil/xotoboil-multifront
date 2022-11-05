@@ -15,18 +15,18 @@ Anyways, you get where this is going. These issues can also bring frustration to
 
 ~ THE SOLUTION :
 
-What about finding common ground? The question was, can these architectures be compatible to work together rather than separate? The aim was to help you build faster, benefit the most out of the technologies that glue these ideas together so that you can decide if you would rather stick to one over the other down the road. Thanks to the combination of Webpack 5 module federation for complete isolation, single spa to fuse your services together and Lerna for any automation in your library of packages, it's possible 🙂 At the root of the project, you will find the basic Lerna registry, with the ability to start all packages by typing : lerna exec yarn start --parallel. Concurrency will greatly help us with this project, as it lets us start multiple processes at once. Packages 1 (Angular), 2 (React) and 3 (Vue) holds the basic micro front end apps that the “shell” package registers. Last but not least, we have the “portal” package, which holds a nav-bar and lets you switch from app to app.
+What about finding common ground? The question was, can these architectures be compatible to work together rather than separate? The aim was to help you build faster, benefit the most out of the technologies that glue these ideas together so that you can decide if you would rather stick to one over the other down the road. Thanks to the combination of Webpack 5 module federation for complete isolation, single spa to fuse your services together and Lerna/Turbo for any automation in your library of packages, it's possible 🙂 At the root of the project, you will find the basic Lerna/Turbo registry, with the ability to start all packages by typing : lerna/Turbo exec yarn start --parallel. Concurrency will greatly help us with this project, as it lets us start multiple processes at once. Packages 1 (Angular), 2 (React) and 3 (Vue) holds the basic micro front end apps that the “shell” package registers. Last but not least, we have the “portal” package, which holds a nav-bar and lets you switch from app to app.
 
 When navigating between apps, the state must not be lost (because of the mount and unmount technology from single spa).
 Each SPA should be self contained with its own build process.
 They are individually deployable without the need to deploy the whole application. To prioritize the result of the changes you make to any individual app. (with git submodules, individual pipelines are available 🙂)
-The last step was to build a shareable store across the micro apps, this is so data can pass from one framework to another. Each app hold its own complex state yet each are able to share data from a global store. 
+The last step was to build a shareable store across the micro apps, this is so data can pass from one framework to another. Each app hold its own complex state yet each are able to share data from a global store.
 
 I hope you like this repo, there are always room for improvements, but it's available to you 🙂
 
 ~ THE SCRIPTS :
 
-```shell 
+```shell
 yarn boot # to install all deps
 yarn start # to start full app
 yarn start:shell # to run shell - (required)
@@ -45,4 +45,3 @@ yarn start:app3 # to run app3 - (micro service)
 All the best and happy coding.
 
 GREG
-
