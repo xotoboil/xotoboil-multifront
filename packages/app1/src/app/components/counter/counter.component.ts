@@ -1,10 +1,10 @@
-import {Component, OnInit} from "@angular/core";
-import {Observable} from "rxjs";
-import {Decrement, Increment, Reset} from "../../store/actions/counter.actions";
-import {globalEventDistributor} from "../../../single-spa/single-spa-props";
-import {select, Store} from "@ngrx/store";
-import {CounterState} from "src/app/models/CounterModels";
-import {selectCount} from "src/app/store/reducers/counter.reducer";
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { Decrement, Increment, Reset } from "../../store/actions/counter.actions";
+import { globalEventDistributor } from "../../../single-spa/single-spa-props";
+import { select, Store } from "@ngrx/store";
+import { CounterState } from "src/app/models/CounterModels";
+import { selectCount } from "src/app/store/reducers/counter.reducer";
 
 @Component({
 	selector: "app-counter",

@@ -3,7 +3,7 @@
 		"declaration": true,
 		"noImplicitAny": false,
 		"removeComments": true,
-		"allowSyntheticDefaultImports" : true,
+		"allowSyntheticDefaultImports": true,
 		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,

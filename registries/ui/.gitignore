@@ -1,25 +1,26 @@
-# Logs
-logs
+dist/
+www/
+loader/
+
+*~
+*.sw[mnpcod]
 *.log
-npm-debug.log*
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
 
-# Dependency directories
+.stencil/
+.idea/
+.vscode/
+.sass-cache/
+.versions/
 node_modules/
+$RECYCLE.BIN/
 
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# dotenv environment variables file
-.env
-
-# Editor directories and files
-.idea
 .DS_Store
-
-# Generated
-/dist/
-/coverage/
-/build/
+Thumbs.db
+UserInterfaceState.xcuserstate
+.env

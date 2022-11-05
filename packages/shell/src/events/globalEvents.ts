@@ -5,10 +5,10 @@ class GlobalStore {
 export class GlobalEventDistributor {
 	globalStore: GlobalStore = new GlobalStore();
 
-	handlerList: {event: string; callback: Function}[] = [];
+	handlerList: { event: string; callback: Function }[] = [];
 
 	on(event: string, callback: Function) {
-		this.handlerList.push({event, callback});
+		this.handlerList.push({ event, callback });
 	}
 
 	emit(event: string) {

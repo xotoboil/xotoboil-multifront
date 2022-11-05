@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 import singleSpaReact from "single-spa-react";
-import {Counter} from "./components/counter/Counter";
+import { Counter } from "./components/counter/Counter";
 import store from "./store/index";
 import "./index.scss";
-// import {ComponentLibrary} from "@xotoboil-multifront/ui-vue";
 
 export let globalEventDistributor: Record<string, any>;
 

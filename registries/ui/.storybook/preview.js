@@ -1,5 +1,8 @@
+import { defineCustomElements } from "../loader";
+defineCustomElements();
+
 export const parameters = {
-	actions: {argTypesRegex: "^on[A-Z].*"},
+	actions: { argTypesRegex: "^on[A-Z].*" },
 	controls: {
 		matchers: {
 			color: /(background|color)$/i,
@@ -7,12 +10,3 @@ export const parameters = {
 		},
 	},
 };
-
-import {useArgs} from "@storybook/client-api";
-
-export const decorators = [
-	(story, context) => {
-		const [_, updateArgs] = useArgs();
-		return story({...context, updateArgs});
-	},
-];

@@ -15,9 +15,7 @@
 		"lib": ["es2018", "dom"],
 		"strict": false,
 		"paths": {
-			"@angular/*": [
-			  "./node_modules/@angular/*"
-			]
+			"@angular/*": ["./node_modules/@angular/*"]
 		}
 	}
 }

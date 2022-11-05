@@ -23,13 +23,13 @@ module.exports = {
 	plugins: ["simple-import-sort", "@typescript-eslint/eslint-plugin", "unused-imports", "jest"],
 	ignorePatterns: ["**/utilities/*", "**/*.json", "**/*.svg", "**/*.md", "**/*.csv", "**/*.lock", "**/*.css", "**/*.scss"],
 	rules: {
-		"@typescript-eslint/typedef": [off, {arrayDestructuring: true, arrowParameter: true, memberVariableDeclaration: true, objectDestructuring: true, parameter: true, propertyDeclaration: true, variableDeclaration: true}],
-		"prettier/prettier": ["error", {}, {fileInfoOptions: {withNodeModules: true}, usePrettierrc: true}],
+		"@typescript-eslint/typedef": [off, { arrayDestructuring: true, arrowParameter: true, memberVariableDeclaration: true, objectDestructuring: true, parameter: true, propertyDeclaration: true, variableDeclaration: true }],
+		"prettier/prettier": ["error", {}, { fileInfoOptions: { withNodeModules: true }, usePrettierrc: true }],
 		"no-new": [off],
 		"no-unused-vars": off,
 		"unused-imports/no-unused-imports": error,
 		"object-curly-spacing": off,
-		"unused-imports/no-unused-vars": [off, {vars: "all", varsIgnorePattern: "^_", args: "after-used", argsIgnorePattern: "^_"}],
+		"unused-imports/no-unused-vars": [off, { vars: "all", varsIgnorePattern: "^_", args: "after-used", argsIgnorePattern: "^_" }],
 		"no-debugger": process.env.NODE_ENV === "production" ? "warn" : off,
 		"@typescript-eslint/no-useless-constructor": off,
 		"@typescript-eslint/no-this-alias": off,
@@ -44,5 +44,5 @@ module.exports = {
 		"@typescript-eslint/no-namespace": off,
 		"import/prefer-default-export": off,
 	},
-	overrides: [{files: ["*.js"], rules: {"@typescript-eslint/no-var-requires": off}}],
+	overrides: [{ files: ["*.js"], rules: { "@typescript-eslint/no-var-requires": off } }],
 };

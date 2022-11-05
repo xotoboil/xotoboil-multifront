@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/typedef */
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const {VueLoaderPlugin} = require("vue-loader");
+const { VueLoaderPlugin } = require("vue-loader");
 const prefixer = require("postcss-prefix-selector");
 
 module.exports = {

@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 
 /* eslint-disable @typescript-eslint/typedef */
-const {merge} = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const path = require("path");
 const deps = require("../package.json").dependencies;
 __webpack_base_uri__ = "http://localhost:8083";
@@ -29,7 +29,7 @@ const devConfig = {
 		new ModuleFederationPlugin({
 			name: "app3",
 			filename: "remoteEntry.js",
-			library: {type: "var", name: "app3"},
+			library: { type: "var", name: "app3" },
 			exposes: {
 				"./ApplicationPage": "./src/index.ts",
 			},

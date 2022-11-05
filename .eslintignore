@@ -1,5 +1,10 @@
-# IGNORE ALL HTML FILES:
+# Dependency directories
+/**/.angular
+/**/node_modules
+/**/lib
+/**/dist
 
+# IGNORE ALL HTML FILES:
 *.html
 
 *.tsbuildinfo

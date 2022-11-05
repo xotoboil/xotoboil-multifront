@@ -1,18 +1,24 @@
 {
-	"compileOnSave": true,
 	"compilerOptions": {
-		"baseUrl": ".",
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
-		"sourceMap": true,
+		"allowUnreachableCode": false,
 		"experimentalDecorators": true,
-		"types": ["node", "jest"],
-		"strict": true,
+		"skipLibCheck": true,
+		"lib": ["dom", "es2017"],
+		"moduleResolution": "node",
+		"module": "esnext",
+		"target": "es2017",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
 		"jsx": "react",
-		"paths": {"@/*": ["src/*"]},
+		"jsxFactory": "h",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
 		"noImplicitAny": false,
 		"declaration": true,
 		"declarationDir": "dist/types"
 	},
-	"include": ["src/**/*"]
+	"include": ["src"],
+	"exclude": ["node_modules"]
 }

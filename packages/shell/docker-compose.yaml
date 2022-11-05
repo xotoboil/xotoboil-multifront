@@ -1,9 +1,8 @@
 version: "3"
 services:
-  
-  shell:
-    build: ./
-    container_name: shell
-    image: shell
-    ports:
-      - 8080:80
+    shell:
+        build: ./
+        container_name: shell
+        image: shell
+        ports:
+            - 8080:80

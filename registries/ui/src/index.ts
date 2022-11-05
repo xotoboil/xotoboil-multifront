@@ -1,8 +1,7 @@
+export { Components, JSX } from "./components";
+
 // UTILS
 export * from "./utils/ParseNestedArgs";
 
 // PLUGIN
-export * from "./plugin/UIPlugin";
-
-// PLUGIN
-export * from "./components/button/UIButton/UIButton.vue";
+export * from "./components/button/UIButton/UIButton";

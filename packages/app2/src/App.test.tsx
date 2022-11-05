@@ -1,6 +1,6 @@
 import React from "react";
-import {render, screen} from "@testing-library/react";
-import {App} from "./App";
+import { render, screen } from "@testing-library/react";
+import { App } from "./App";
 
 const AppTestWrapper: any = (): React.ReactElement => {
 	return <App />;
@@ -8,6 +8,6 @@ const AppTestWrapper: any = (): React.ReactElement => {
 describe("App", () => {
 	test("should render <App/>", () => {
 		render(<AppTestWrapper />);
-		expect(screen.getByRole("heading", {name: /react application template/i})).toBeDefined();
+		expect(screen.getByRole("heading", { name: /react application template/i })).toBeDefined();
 	});
 });

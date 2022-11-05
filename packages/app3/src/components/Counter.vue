@@ -9,13 +9,13 @@
 </template>
 
 <script lang="ts">
-import store from '../store';
-import { Prop, Options,  Watch } from "vue-property-decorator";
+import store from "../store";
+import { Prop, Options, Watch } from "vue-property-decorator";
 import { Vue } from "vue-class-component";
 
-import {UiButton} from "@xotoboil-multifront/ui-vue"
+import { UiButton } from "@xotoboil-multifront/ui-vue";
 
-@Options({name: "Counter", components: {UiButton}})
+@Options({ name: "Counter", components: { UiButton } })
 export default class Counter extends Vue {
 	@Prop()
 	globalEventDistributor: any;
@@ -25,7 +25,7 @@ export default class Counter extends Vue {
 	}
 
 	increment() {
-		store.dispatch('counterIncrement');
+		store.dispatch("counterIncrement");
 	}
-};
+}
 </script>

@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
-import {ComponentFixture, TestBed} from "@angular/core/testing";
-import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from "@angular/core";
-import {CounterComponent} from "./counter.component";
-import {StoreModule} from "@ngrx/store";
-import {rootReducer} from "src/app/store/root-reducer";
-import {Decrement, Increment, Reset} from "src/app/store/actions/counter.actions";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
+import { CounterComponent } from "./counter.component";
+import { StoreModule } from "@ngrx/store";
+import { rootReducer } from "src/app/store/root-reducer";
+import { Decrement, Increment, Reset } from "src/app/store/actions/counter.actions";
 
 describe("CounterComponent", () => {
 	let component: CounterComponent;

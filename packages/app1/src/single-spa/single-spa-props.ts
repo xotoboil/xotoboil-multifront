@@ -1,5 +1,5 @@
-import {ReplaySubject} from "rxjs";
-import {AppProps} from "single-spa";
+import { ReplaySubject } from "rxjs";
+import { AppProps } from "single-spa";
 
 export const singleSpaPropsSubject: ReplaySubject<SingleSpaProps> = new ReplaySubject<SingleSpaProps>(1);
 

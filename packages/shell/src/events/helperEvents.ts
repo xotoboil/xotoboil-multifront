@@ -1,4 +1,4 @@
-import {registerApplication} from "single-spa";
+import { registerApplication } from "single-spa";
 
 export function loadApp(name: string, appImportPath: string, appRoutePath: string) {
 	registerApplication(

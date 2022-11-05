@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/typedef */
-const {merge} = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
 const deps = require("../package.json").dependencies;
@@ -13,7 +13,7 @@ const devConfig = {
 		historyApiFallback: {
 			index: "index.html",
 		},
-		historyApiFallback: {rewrites: [{from: /./, to: "/index.html"}]},
+		historyApiFallback: { rewrites: [{ from: /./, to: "/index.html" }] },
 	},
 
 	plugins: [

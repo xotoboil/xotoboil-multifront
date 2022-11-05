@@ -17,7 +17,7 @@ module.exports = {
 	plugins: [
 		new ModuleFederationPlugin({
 			name: "app1",
-			library: {type: "var", name: "app1"},
+			library: { type: "var", name: "app1" },
 			filename: "remoteEntry.js",
 			exposes: {
 				"./ApplicationPage": "./src/main.single-spa.ts",

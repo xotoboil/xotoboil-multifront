@@ -6,9 +6,9 @@ module.exports = {
 		indentation: [4],
 		indentation: "tab",
 		"unit-disallowed-list": ["px"],
-		"at-rule-no-unknown": [true, {ignoreAtRules: ["use", "extends", "ignores", "include", "mixin", "if", "else", "media", "for", "each", "warn", "extend", "function", "return"]}],
-		"at-rule-empty-line-before": ["always", {except: ["blockless-after-same-name-blockless", "first-nested"], ignore: ["after-comment"], ignoreAtRules: ["extends", "ignores", "include", "mixin", "if", "else", "media", "for", "each", "warn", "extend", "function"]}],
-		"order/order": [["dollar-variables", "custom-properties", "at-rules", "declarations", {type: "at-rule", name: "supports"}, {type: "at-rule", name: "media"}, "rules"], {severity: "warning"}],
+		"at-rule-no-unknown": [true, { ignoreAtRules: ["use", "extends", "ignores", "include", "mixin", "if", "else", "media", "for", "each", "warn", "extend", "function", "return"] }],
+		"at-rule-empty-line-before": ["always", { except: ["blockless-after-same-name-blockless", "first-nested"], ignore: ["after-comment"], ignoreAtRules: ["extends", "ignores", "include", "mixin", "if", "else", "media", "for", "each", "warn", "extend", "function"] }],
+		"order/order": [["dollar-variables", "custom-properties", "at-rules", "declarations", { type: "at-rule", name: "supports" }, { type: "at-rule", name: "media" }, "rules"], { severity: "warning" }],
 		"order/properties-order": [
 			/** CONTENTS */
 

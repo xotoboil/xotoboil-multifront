@@ -1,6 +1,6 @@
-import {combineReducers, createStore, Store} from "redux";
-import {counterReducer} from "../components/counter/store/reducer";
-import {globalEventDistributor} from "../App";
+import { combineReducers, createStore, Store } from "redux";
+import { globalEventDistributor } from "../App";
+import { counterReducer } from "./reducers/counter.reducer";
 
 const store: Store<any, any> = createStore(
 	combineReducers({

@@ -58,7 +58,7 @@
 					r = 0;
 				return {
 					next: function () {
-						return r < t.length ? {value: e[t[r++]], done: !1} : {value: void 0, done: !0};
+						return r < t.length ? { value: e[t[r++]], done: !1 } : { value: void 0, done: !0 };
 					},
 				};
 			}),
@@ -80,7 +80,7 @@
 		this[Le] = {};
 	}
 	function l(e) {
-		Object.defineProperty(this, Ae, {value: e}), Object.keys(e).forEach(c, this);
+		Object.defineProperty(this, Ae, { value: e }), Object.keys(e).forEach(c, this);
 	}
 	function c(e) {
 		Object.defineProperty(this, e, {
@@ -98,10 +98,10 @@
 			return t.hasOwnProperty(r) && !t[r].linkRecord && (delete t[r], (n = !0)), n;
 		};
 		var t = {};
-		(this[Ke] = {lastRegister: void 0, records: t}), (this.trace = !1);
+		(this[Ke] = { lastRegister: void 0, records: t }), (this.trace = !1);
 	}
 	function f(e, t, r) {
-		return (e.records[t] = {key: t, registration: r, module: void 0, importerSetters: void 0, loadError: void 0, evalError: void 0, linkRecord: {instantiatePromise: void 0, dependencies: void 0, execute: void 0, executingRequire: !1, moduleObj: void 0, setters: void 0, depsInstantiatePromise: void 0, dependencyInstantiations: void 0}});
+		return (e.records[t] = { key: t, registration: r, module: void 0, importerSetters: void 0, loadError: void 0, evalError: void 0, linkRecord: { instantiatePromise: void 0, dependencies: void 0, execute: void 0, executingRequire: !1, moduleObj: void 0, setters: void 0, depsInstantiatePromise: void 0, dependencyInstantiations: void 0 } });
 	}
 	function p(e, r, n, o, i) {
 		return (
@@ -181,7 +181,7 @@
 		});
 	}
 	function h(e, t, r) {
-		(e.loads = e.loads || {}), (e.loads[t.key] = {key: t.key, deps: r.dependencies, dynamicDeps: [], depMap: r.depMap || {}});
+		(e.loads = e.loads || {}), (e.loads[t.key] = { key: t.key, deps: r.dependencies, dynamicDeps: [], depMap: r.depMap || {} });
 	}
 	function m(e, r, n, o, i) {
 		if (n.depsInstantiatePromise) return n.depsInstantiatePromise;
@@ -213,7 +213,7 @@
 		);
 	}
 	function v(e, t) {
-		(this.loader = e), (this.key = this.id = t), (this.meta = {url: t});
+		(this.loader = e), (this.key = this.id = t), (this.meta = { url: t });
 	}
 	function y(e, t, r, n, o, i) {
 		if (t.module) return t.module;
@@ -236,7 +236,7 @@
 					}
 				})(n.execute);
 			else {
-				var f = {id: r.key},
+				var f = { id: r.key },
 					p = n.moduleObj;
 				Object.defineProperty(f, "exports", {
 					configurable: !0,
@@ -351,7 +351,7 @@
 	}
 	function R(e, t) {
 		if (Object.hasOwnProperty.call(e, t)) return t;
-		var r = {name: t, match: void 0, len: 0};
+		var r = { name: t, match: void 0, len: 0 };
 		return Object.keys(e).forEach(M, r), r.match;
 	}
 	function C(e, t, r, n) {
@@ -375,7 +375,7 @@
 	}
 	function L(e, t, r) {
 		var n,
-			o = {pluginKey: void 0, pluginArgument: void 0, pluginModule: void 0, packageKey: void 0, packageConfig: void 0, load: void 0};
+			o = { pluginKey: void 0, pluginArgument: void 0, pluginModule: void 0, packageKey: void 0, packageConfig: void 0, load: void 0 };
 		r && (t.pluginFirst ? -1 !== (n = r.lastIndexOf("!")) && (o.pluginArgument = o.pluginKey = r.substr(0, n)) : -1 !== (n = r.indexOf("!")) && (o.pluginArgument = o.pluginKey = r.substr(n + 1)), (o.packageKey = R(t.packages, r)), o.packageKey && (o.packageConfig = t.packages[o.packageKey]));
 		return o;
 	}
@@ -413,7 +413,7 @@
 			c = $(e, l);
 		if (((n.packageKey = (c && c.packageKey) || R(e.packages, l)), !n.packageKey)) return l;
 		if (-1 !== e.packageConfigKeys.indexOf(l)) return (n.packageKey = void 0), l;
-		n.packageConfig = e.packages[n.packageKey] || (e.packages[n.packageKey] = {defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1});
+		n.packageConfig = e.packages[n.packageKey] || (e.packages[n.packageKey] = { defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1 });
 		var d = l.substr(n.packageKey.length + 1);
 		return (function (e, t, r, n, o, i, a) {
 			if (!o) {
@@ -448,8 +448,8 @@
 				(n.packageKey = (u && u.packageKey) || R(e.packages, s)),
 				n.packageKey
 					? -1 !== e.packageConfigKeys.indexOf(s)
-						? ((n.packageKey = void 0), (n.load = {extension: "", deps: void 0, format: void 0, loader: void 0, scriptLoad: void 0, globals: void 0, nonce: void 0, integrity: void 0, sourceMap: void 0, exports: void 0, encapsulateGlobal: !1, crossOrigin: void 0, cjsRequireDetection: !0, cjsDeferDepsExecute: !1, esModule: !1}), (n.load.format = "json"), (n.load.loader = ""), Promise.resolve(s))
-						: ((n.packageConfig = e.packages[n.packageKey] || (e.packages[n.packageKey] = {defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1})),
+						? ((n.packageKey = void 0), (n.load = { extension: "", deps: void 0, format: void 0, loader: void 0, scriptLoad: void 0, globals: void 0, nonce: void 0, integrity: void 0, sourceMap: void 0, exports: void 0, encapsulateGlobal: !1, crossOrigin: void 0, cjsRequireDetection: !0, cjsDeferDepsExecute: !1, esModule: !1 }), (n.load.format = "json"), (n.load.loader = ""), Promise.resolve(s))
+						: ((n.packageConfig = e.packages[n.packageKey] || (e.packages[n.packageKey] = { defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1 })),
 						  (u && !n.packageConfig.configured ? B(a, e, u.configPath, n) : Ue).then(function () {
 								var t = s.substr(n.packageKey.length + 1);
 								return (function (e, t, r, n, o, i, a) {
@@ -474,7 +474,7 @@
 		var r,
 			n,
 			o = e ? t.indexOf("!") : t.lastIndexOf("!");
-		if (-1 !== o) return e ? ((r = t.substr(o + 1)), (n = t.substr(0, o))) : ((r = t.substr(0, o)), (n = t.substr(o + 1) || r.substr(r.lastIndexOf(".") + 1))), {argument: r, plugin: n};
+		if (-1 !== o) return e ? ((r = t.substr(o + 1)), (n = t.substr(0, o))) : ((r = t.substr(0, o)), (n = t.substr(o + 1) || r.substr(r.lastIndexOf(".") + 1))), { argument: r, plugin: n };
 	}
 	function q(e, t, r) {
 		return e ? r + "!" + t : t + "!" + r;
@@ -520,7 +520,7 @@
 			c = [];
 		for (var f in u) {
 			var p = G(f);
-			c.push({condition: p, map: u[f]}), l.push(d.prototype.import.call(e, p.module, n));
+			c.push({ condition: p, map: u[f] }), l.push(d.prototype.import.call(e, p.module, n));
 		}
 		return Promise.all(l)
 			.then(function (e) {
@@ -564,7 +564,7 @@
 				!u || (r && ((o && s.wildcard) || !(r.length < u[1].length))) || ((r = u[1]), (o = !s.wildcard), (n = r + a.substr(s.length)));
 			}
 		}
-		if (r) return {packageKey: r, configPath: n};
+		if (r) return { packageKey: r, configPath: n };
 	}
 	function B(e, r, n, o, i) {
 		var a = e.pluginLoader || e;
@@ -594,7 +594,7 @@
 			r,
 			n,
 			o = e.lastIndexOf("|");
-		return -1 !== o ? ((t = e.substr(o + 1)), (r = e.substr(0, o)), "~" === t[0] && ((n = !0), (t = t.substr(1)))) : ((n = "~" === e[0]), (t = "default"), (r = e.substr(n)), -1 !== Ve.indexOf(r) && ((t = r), (r = null))), {module: r || "@system-env", prop: t, negate: n};
+		return -1 !== o ? ((t = e.substr(o + 1)), (r = e.substr(0, o)), "~" === t[0] && ((n = !0), (t = t.substr(1)))) : ((n = "~" === e[0]), (t = "default"), (r = e.substr(n)), -1 !== Ve.indexOf(r) && ((t = r), (r = null))), { module: r || "@system-env", prop: t, negate: n };
 	}
 	function H(e, t, r) {
 		return d.prototype.import.call(this, e.module, t).then(function (t) {
@@ -686,7 +686,7 @@
 						return a;
 				})(e, t, r, n, i);
 			try {
-				ee(e), !ot && e._nodeRequire && ((ot = e._nodeRequire("vm")), (it = ot.runInThisContext("typeof System !== 'undefined' && System") === e)), it ? ot.runInThisContext(V(t, r, n, !a), {filename: n + (r ? "!transpiled" : "")}) : (0, eval)(V(t, r, n, !a)), te();
+				ee(e), !ot && e._nodeRequire && ((ot = e._nodeRequire("vm")), (it = ot.runInThisContext("typeof System !== 'undefined' && System") === e)), it ? ot.runInThisContext(V(t, r, n, !a), { filename: n + (r ? "!transpiled" : "") }) : (0, eval)(V(t, r, n, !a)), te();
 			} catch (e) {
 				return te(), e;
 			}
@@ -702,7 +702,7 @@
 		var t,
 			r = e.lastIndexOf("!"),
 			n = (t = -1 !== r ? e.substr(0, r) : e).split("/");
-		return n.pop(), (n = n.join("/")), {filename: ne(t), dirname: ne(n)};
+		return n.pop(), (n = n.join("/")), { filename: ne(t), dirname: ne(n) };
 	}
 	function ae(e) {
 		if (-1 === yt.indexOf(e)) {
@@ -749,11 +749,11 @@
 	}
 	function le(e) {
 		return function (t, r, n) {
-			e(t, r, n), ("object" != typeof (r = n.exports) && "function" != typeof r) || "__esModule" in r || Object.defineProperty(n.exports, "__esModule", {value: !0});
+			e(t, r, n), ("object" != typeof (r = n.exports) && "function" != typeof r) || "__esModule" in r || Object.defineProperty(n.exports, "__esModule", { value: !0 });
 		};
 	}
 	function ce(e, t) {
-		!e.load.esModule || ("object" != typeof t && "function" != typeof t) || "__esModule" in t || Object.defineProperty(t, "__esModule", {value: !0});
+		!e.load.esModule || ("object" != typeof t && "function" != typeof t) || "__esModule" in t || Object.defineProperty(t, "__esModule", { value: !0 });
 	}
 	function de(e, t, r, n, o) {
 		return Promise.resolve(r)
@@ -808,7 +808,7 @@
 						return r
 							? t
 							: (function (e) {
-									return e instanceof l ? e : new l(e && e.__esModule ? e : {default: e, __useDefault: e});
+									return e instanceof l ? e : new l(e && e.__esModule ? e : { default: e, __useDefault: e });
 							  })(e);
 					})
 				);
@@ -828,7 +828,7 @@
 						return o() ? void 0 : Te;
 					case "json":
 						var a = JSON.parse(r);
-						return e.newModule({default: a, __useDefault: a});
+						return e.newModule({ default: a, __useDefault: a });
 					case "amd":
 						var s = Ee.define;
 						(Ee.define = e.amdDefine),
@@ -887,7 +887,7 @@
 							)
 								for (var s = 0; s < l.length; s++) o(l[s]);
 							var u = ie(a.id),
-								c = {exports: i, args: [o, i, a, u.filename, u.dirname, Ee, Ee]},
+								c = { exports: i, args: [o, i, a, u.filename, u.dirname, Ee, Ee] },
 								d = "(function (require, exports, module, __filename, __dirname, global, GLOBAL";
 							if (n.load.globals) for (var f in n.load.globals) c.args.push(o(n.load.globals[f])), (d += ", " + f);
 							var p = Ee.define;
@@ -942,7 +942,7 @@
 				return t === o.pluginModule
 					? r
 					: ("string" == typeof o.load.sourceMap && (o.load.sourceMap = JSON.parse(o.load.sourceMap)),
-					  (o.pluginLoad = o.pluginLoad || {name: n, address: n, source: r, metadata: o.load}),
+					  (o.pluginLoad = o.pluginLoad || { name: n, address: n, source: r, metadata: o.load }),
 					  (o.load.deps = o.load.deps || []),
 					  Promise.resolve(t.translate.call(e, o.pluginLoad, o.traceOpts)).then(function (e) {
 							var t = o.load.sourceMap;
@@ -959,10 +959,10 @@
 		void 0 === e[(n = o.shift())] && (e[n] = r);
 	}
 	function me() {
-		d.call(this), (this._loader = {}), (this[Ne] = {}), (this[ze] = {baseURL: be, paths: {}, packageConfigPaths: [], packageConfigKeys: [], map: {}, packages: {}, depCache: {}, meta: {}, bundles: {}, production: !1, transpiler: void 0, loadedBundles: {}, warnings: !1, pluginFirst: !1, wasm: !1}), (this.scriptSrc = _t), (this._nodeRequire = ht), this.registry.set("@empty", Te), ve.call(this, !1, !1), dt(this);
+		d.call(this), (this._loader = {}), (this[Ne] = {}), (this[ze] = { baseURL: be, paths: {}, packageConfigPaths: [], packageConfigKeys: [], map: {}, packages: {}, depCache: {}, meta: {}, bundles: {}, production: !1, transpiler: void 0, loadedBundles: {}, warnings: !1, pluginFirst: !1, wasm: !1 }), (this.scriptSrc = _t), (this._nodeRequire = ht), this.registry.set("@empty", Te), ve.call(this, !1, !1), dt(this);
 	}
 	function ve(e, t) {
-		(this[ze].production = e), this.registry.set("@system-env", (Pt = this.newModule({browser: we, node: !!this._nodeRequire, production: !t && e, dev: t || !e, build: t, default: !0})));
+		(this[ze].production = e), this.registry.set("@system-env", (Pt = this.newModule({ browser: we, node: !!this._nodeRequire, production: !t && e, dev: t || !e, build: t, default: !0 })));
 	}
 	function ye(e, t) {
 		x.call(e[ze], "SystemJS." + t + " is deprecated for SystemJS.registry." + t);
@@ -1058,7 +1058,7 @@
 			return !!Object.hasOwnProperty.call(this[Le], e) && (delete this[Le][e], !0);
 		});
 	var Ae = e("baseObject");
-	(l.prototype = Object.create(null)), "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(l.prototype, Symbol.toStringTag, {value: "Module"});
+	(l.prototype = Object.create(null)), "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(l.prototype, Symbol.toStringTag, { value: "Module" });
 	var Ke = e("register-internal");
 	(d.prototype = Object.create(i.prototype)), (d.prototype.constructor = d);
 	var Ie = (d.instantiate = e("instantiate"));
@@ -1169,7 +1169,7 @@
 							throw new Error("Unable to fetch file URLs in this environment.");
 						}
 						e = e.replace(/#/g, "%23");
-						var o = {headers: {Accept: "application/x-es-module, */*"}};
+						var o = { headers: { Accept: "application/x-es-module, */*" } };
 						return (
 							r && (o.integrity = r),
 							t && ("string" == typeof t && (o.headers.Authorization = t), (o.credentials = "include")),
@@ -1280,7 +1280,7 @@
 					-1 !== (u = n.indexOf("module")) && n.splice(u, 1),
 					r ? (e.registerDynamic(r, n, !1, i), pt ? ((pt = void 0), (Ot = !0)) : Ot || (pt = [n, i])) : e.registerDynamic(n, !1, St ? le(i) : i);
 			}
-			e.set("@@cjs-helpers", e.newModule({requireResolve: oe.bind(e), getPathVars: ie})), e.set("@@global-helpers", e.newModule({prepareGlobal: ue})), (r.amd = {}), (e.amdDefine = r), (e.amdRequire = t);
+			e.set("@@cjs-helpers", e.newModule({ requireResolve: oe.bind(e), getPathVars: ie })), e.set("@@global-helpers", e.newModule({ prepareGlobal: ue })), (r.amd = {}), (e.amdDefine = r), (e.amdRequire = t);
 		};
 	"undefined" != typeof window && "undefined" != typeof document && window.location && (ct = location.protocol + "//" + location.hostname + (location.port ? ":" + location.port : ""));
 	var ft,
@@ -1328,7 +1328,7 @@
 		(me.prototype[(me.resolve = d.resolve)] = me.prototype.normalize =
 			function (e, t) {
 				var r = this[ze],
-					n = {pluginKey: void 0, pluginArgument: void 0, pluginModule: void 0, packageKey: void 0, packageConfig: void 0, load: void 0},
+					n = { pluginKey: void 0, pluginArgument: void 0, pluginModule: void 0, packageKey: void 0, packageConfig: void 0, load: void 0 },
 					o = L(0, r, t),
 					i = this;
 				return Promise.resolve()
@@ -1356,7 +1356,7 @@
 					.then(function (e) {
 						return (
 							function (e, t, r) {
-								r.load = r.load || {extension: "", deps: void 0, format: void 0, loader: void 0, scriptLoad: void 0, globals: void 0, nonce: void 0, integrity: void 0, sourceMap: void 0, exports: void 0, encapsulateGlobal: !1, crossOrigin: void 0, cjsRequireDetection: !0, cjsDeferDepsExecute: !1, esModule: !1};
+								r.load = r.load || { extension: "", deps: void 0, format: void 0, loader: void 0, scriptLoad: void 0, globals: void 0, nonce: void 0, integrity: void 0, sourceMap: void 0, exports: void 0, encapsulateGlobal: !1, crossOrigin: void 0, cjsRequireDetection: !0, cjsDeferDepsExecute: !1, esModule: !1 };
 								var n,
 									o = 0;
 								for (var i in e.meta)
@@ -1395,7 +1395,7 @@
 			me.prototype.resolveSync =
 				function e(t, r) {
 					var n = this[ze],
-						o = {pluginKey: void 0, pluginArgument: void 0, pluginModule: void 0, packageKey: void 0, packageConfig: void 0, load: void 0},
+						o = { pluginKey: void 0, pluginArgument: void 0, pluginModule: void 0, packageKey: void 0, packageConfig: void 0, load: void 0 },
 						i = i || L(0, n, r),
 						a = F(n.pluginFirst, t);
 					return a ? ((o.pluginKey = e.call(this, a.plugin, r)), q(n.pluginFirst, I.call(this, n, a.argument, i.pluginArgument || r, o, i, !!o.pluginKey), o.pluginKey)) : I.call(this, n, t, i.pluginArgument || r, o, i, !!o.pluginKey);
@@ -1479,7 +1479,7 @@
 								: (function (e, t, r) {
 										return r.pluginKey
 											? e.import(r.pluginKey).then(function (e) {
-													(r.pluginModule = e), (r.pluginLoad = {name: t, address: r.pluginArgument, source: void 0, metadata: r.load}), (r.load.deps = r.load.deps || []);
+													(r.pluginModule = e), (r.pluginLoad = { name: t, address: r.pluginArgument, source: void 0, metadata: r.load }), (r.load.deps = r.load.deps || []);
 											  })
 											: Ue;
 								  })(r, e, o).then(function () {
@@ -1575,7 +1575,7 @@
 					} else {
 						m = (m = K.call(o, i, "/" !== a[a.length - 1] ? a + "/" : a, void 0, !0, !0)).substr(0, m.length - 1);
 						var l = i.packages[m];
-						l || ((l = i.packages[m] = {defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1}).defaultExtension = ""), Q(l, {map: s}, m, !1, i);
+						l || ((l = i.packages[m] = { defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1 }).defaultExtension = ""), Q(l, { map: s }, m, !1, i);
 					}
 				}
 			if (e.packageConfigPaths) {
@@ -1597,7 +1597,7 @@
 				for (var a in e.packages) {
 					if (a.match(/^([^\/]+:)?\/\/$/)) throw new TypeError('"' + a + '" is not a valid package name.');
 					var m = K.call(o, i, "/" !== a[a.length - 1] ? a + "/" : a, void 0, !0, !0);
-					(m = m.substr(0, m.length - 1)), Q((i.packages[m] = i.packages[m] || {defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1}), e.packages[a], m, !1, i);
+					(m = m.substr(0, m.length - 1)), Q((i.packages[m] = i.packages[m] || { defaultExtension: void 0, main: void 0, format: void 0, meta: void 0, map: void 0, packageConfig: void 0, configured: !1 }), e.packages[a], m, !1, i);
 				}
 			if (e.depCache) for (var a in e.depCache) i.depCache[o.normalizeSync(a)] = [].concat(e.depCache[a]);
 			if (e.meta)

@@ -1,17 +1,17 @@
 <template>
-	<Counter :globalEventDistributor="globalEventDistributor"/>
+	<Counter :globalEventDistributor="globalEventDistributor" />
 </template>
 
 <script lang="ts">
-import Counter from './components/Counter.vue';
+import Counter from "./components/Counter.vue";
 import { Vue } from "vue-class-component";
 
 import { Model, Options, Prop } from "vue-property-decorator";
-import store from './store';
+import store from "./store";
 
 @Options({
 	name: "App",
-	components: {Counter},
+	components: { Counter },
 })
 export default class App extends Vue {
 	@Prop()
