@@ -3,7 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { CounterComponent } from "./counter.component";
 import { StoreModule } from "@ngrx/store";
 import { rootReducer } from "@/app/store/root-reducer";
-import { DecrementCounter, IncrementCounter, ResetCounter } from "src/app/store/actions/counter.actions";
+import { DecrementCounter, IncrementCounter, ResetCounter } from "@/app/store/actions/counter.actions";
 
 describe("CounterComponent", () => {
 	let component: CounterComponent;

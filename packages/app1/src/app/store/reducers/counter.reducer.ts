@@ -1,6 +1,6 @@
 import { Action, createSelector } from "@ngrx/store";
-import { COUNTER_KEY } from "src/app/enums/CounterEnums";
-import { CounterState } from "src/app/models/CounterModel";
+import { COUNTER_KEY } from "@/app/enums/CounterEnums";
+import { CounterState } from "@/app/models/CounterModel";
 import { ActionTypes } from "../actions/counter.actions";
 
 export const counterState = +localStorage.getItem(COUNTER_KEY) ?? 0;
