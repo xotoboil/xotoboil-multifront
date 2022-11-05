@@ -17,6 +17,7 @@
 		"boot": "yarn initialize && yarn build",
 		"start": "turbo run start --filter=./packages/*",
 		"build": "turbo run build --filter=./registries/*",
+		"clean": "turbo run clean",
 		"start:shell": "yarn workspace @xotoboil-multifront/shell run start",
 		"start:portal": "yarn workspace @xotoboil-multifront/portal run start",
 		"start:app1": "yarn workspace @xotoboil-multifront/app1 run start",
@@ -26,7 +27,7 @@
 		"lint:es": "eslint -f codeframe --ignore-path .eslintignore --fix",
 		"lint:style": "stylelint --config .stylelintrc.js --fix",
 		"lint:prettify": "prettier --config .prettierrc.js --ignore-path .prettierignore --write .",
-		"test": "yarn workspace @xotoboil-multifront/* run test",
+		"test": "turbo run test",
 		"test:e2e": "yarn workspace @xotoboil-multifront/* run test:e2e"
 	},
 	"dependencies": {},

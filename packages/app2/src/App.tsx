@@ -18,7 +18,7 @@ export const App: any = (props: any): JSX.Element => (
 	</div>
 );
 
-const reactLifecycles: singleSpaReact.Lifecycles = singleSpaReact({
+const reactLifecycles = singleSpaReact({
 	React,
 	ReactDOM,
 	rootComponent: App,

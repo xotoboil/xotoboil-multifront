@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "echo starting",
 		"build": "yarn tsc",
-		"tsc": "tsc -p ."
+		"tsc": "tsc -p .",
+		"clean": "rm -rf dist && rm -rf lib"
 	},
 	"dependencies": {
 		"vue": "^3.0.0"

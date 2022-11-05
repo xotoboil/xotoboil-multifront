@@ -12,7 +12,7 @@ export const App: any = (): JSX.Element => (
 	</div>
 );
 
-const headerLifecycles: singleSpaReact.Lifecycles = singleSpaReact({
+const headerLifecycles: { bootstrap: any; mount: any; unmount: any } = singleSpaReact({
 	React,
 	ReactDOM,
 	rootComponent: App,

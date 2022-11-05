@@ -6,6 +6,7 @@
 			"cache": true,
 			"outputs": ["dist/**", "lib/**"]
 		},
+		"test": {},
 		"start": {}
 	}
 }

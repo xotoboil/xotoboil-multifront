@@ -5,7 +5,9 @@
 	"scripts": {
 		"start": "webpack-cli serve --config config/webpack.dev.js",
 		"build": "webpack --config config/webpack.prod.js",
-		"build:dev": "webpack --mode development"
+		"build:dev": "webpack --mode development",
+		"test": "jest src --passWithNoTests --maxWorkers=50%",
+		"clean": "rm -rf dist && rm -rf lib"
 	},
 	"license": "MIT",
 	"devDependencies": {

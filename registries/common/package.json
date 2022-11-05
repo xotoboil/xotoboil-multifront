@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "echo starting",
 		"build": "webpack --config config/webpack.prod.js",
-		"tsc": "tsc -p ."
+		"tsc": "tsc -p .",
+		"clean": "rm -rf dist && rm -rf lib"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.0",

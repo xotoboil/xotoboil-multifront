@@ -6,9 +6,9 @@
 		"start": "webpack-cli serve --config config/webpack.dev.js",
 		"build": "webpack --config config/webpack.prod.js",
 		"serve": "serve dist",
-		"clean": "rm -rf dist",
 		"test": "jest src --passWithNoTests --maxWorkers=50%",
-		"test:coverage": "jest src --passWithNoTests --maxWorkers=50% --coverage"
+		"test:coverage": "jest src --passWithNoTests --maxWorkers=50% --coverage",
+		"clean": "rm -rf dist && rm -rf lib"
 	},
 	"dependencies": {
 		"react": "^17.0.2",

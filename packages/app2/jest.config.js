@@ -1,5 +1,5 @@
 module.exports = {
-	preset: "ts-jest/presets/js-with-ts",
+	preset: "ts-jest",
 	setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
 	moduleNameMapper: {
 		".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",

@@ -3,6 +3,9 @@
 /**/node_modules
 /**/lib
 /**/dist
+/**/react-component-lib
+/**/angular-component-lib
+/**/vue-component-lib
 
 # IGNORE ALL HTML FILES:
 *.html

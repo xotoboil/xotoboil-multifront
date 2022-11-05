@@ -18,7 +18,8 @@
 		"storybook": "start-storybook -p 6006",
 		"build": "stencil build --docs",
 		"generate": "stencil generate",
-		"update:dependencies": "npx ncu -u --target minor"
+		"update:dependencies": "npx ncu -u --target minor",
+		"clean": "rm -rf dist && rm -rf lib"
 	},
 	"dependencies": {
 		"@stencil/core": "^2.13.0"
