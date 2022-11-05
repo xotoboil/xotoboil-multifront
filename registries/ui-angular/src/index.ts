@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {DIRECTIVES} from "./directives";
-import { defineCustomElements } from '@xotoboil-multifront/stencil/loader';
+import {defineCustomElements} from "@xotoboil-multifront/stencil/loader";
 
 defineCustomElements();
 
@@ -10,5 +10,4 @@ defineCustomElements();
 })
 export class UiLibrary {}
 
-
-export * from './components';
+export * from "./components";

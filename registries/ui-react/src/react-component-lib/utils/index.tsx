@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* tslint:disable */
 import React from 'react';
 
 import type { StyleReactProps } from '../interfaces';

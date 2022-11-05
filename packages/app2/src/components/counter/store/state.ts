@@ -1,3 +1,3 @@
-export const initialState: any = {
+export const counterState: any = {
 	counter: 0,
 };

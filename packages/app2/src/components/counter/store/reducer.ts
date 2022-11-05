@@ -1,7 +1,7 @@
 import {counterIncrement} from "./action";
-import {initialState} from "./state";
+import {counterState} from "./state";
 
-export function counterReducer(state: any = initialState, action: any) {
+export function counterReducer(state: any = counterState, action: any) {
 	switch (action.type) {
 		case "counter/counterIncrement":
 			return counterIncrement(state);

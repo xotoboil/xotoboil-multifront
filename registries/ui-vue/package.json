@@ -4,7 +4,7 @@
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
 	"scripts": {
-		"start": "echo ok",
+		"start": "echo starting",
 		"build": "npm run tsc",
 		"tsc": "tsc -p ."
 	},

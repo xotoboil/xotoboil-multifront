@@ -1,0 +1,16 @@
+{
+  "preset": "jest-preset-angular",
+  "transform": {
+    "^.+\\.(ts|js|html)$": "jest-preset-angular"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/setup-jest.ts"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/dist/"],
+  "globalSetup": "jest-preset-angular/global-setup",
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "<rootDir>/tsconfig.spec.json",
+      "stringifyContentPathRegex": "\\.html$"
+    }
+  },
+  "modulePathIgnorePatterns": ["node_modules/devextreme/"]
+}

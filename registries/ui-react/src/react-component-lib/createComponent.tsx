@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* tslint:disable */
 import React, { createElement } from 'react';
 
 import {

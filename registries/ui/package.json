@@ -8,7 +8,7 @@
 		"dist/**/*"
 	],
 	"scripts": {
-		"start": "echo ok",
+		"start": "echo starting",
 		"watch": "webpack-cli serve --config config/webpack.dev.js",
 		"build": "webpack --config config/webpack.prod.js",
 		"serve": "serve dist",

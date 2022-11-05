@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useSelector} from "react-redux";
 import store, {getGlobalStore} from "../../store";
-import {UiButton} from "@xotoboil-multifront/ui-react"
+import {UiButton} from "@xotoboil-multifront/ui-react";
 
 export const Counter: any = (props: any): JSX.Element => {
 	const localCounter = useSelector((state: any) => state.counter.counter);

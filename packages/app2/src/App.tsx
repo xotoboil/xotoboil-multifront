@@ -7,7 +7,7 @@ import store from "./store/index";
 import "./index.scss";
 // import {ComponentLibrary} from "@xotoboil-multifront/ui-vue";
 
-export let globalEventDistributor: any;
+export let globalEventDistributor: Record<string, any>;
 
 export const App: any = (props: any): JSX.Element => (
 	<div>

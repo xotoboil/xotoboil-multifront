@@ -11,7 +11,7 @@
 		"loader/"
 	],
 	"scripts": {
-    "start": "echo ok",
+    "start": "echo starting",
 		"watch": "stencil build --dev --watch --serve",
 		"test:service": "stencil test --spec --e2e",
 		"test:watch": "stencil test --spec --e2e --watchAll",

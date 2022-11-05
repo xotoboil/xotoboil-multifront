@@ -1,3 +1,6 @@
+/* eslint-disable */
+/* tslint:disable */
+
 import { VNode, defineComponent, getCurrentInstance, h, inject, ref, Ref } from 'vue';
 
 export interface InputProps<T> {

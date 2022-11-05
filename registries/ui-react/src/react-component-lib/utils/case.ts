@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* tslint:disable */
 export const dashToPascalCase = (str: string) =>
   str
     .toLowerCase()

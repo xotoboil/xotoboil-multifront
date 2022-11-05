@@ -1,3 +1,6 @@
+/* eslint-disable */
+/* tslint:disable */
+
 import { camelToDashCase } from './case';
 
 export const attachProps = (node: HTMLElement, newProps: any, oldProps: any = {}) => {

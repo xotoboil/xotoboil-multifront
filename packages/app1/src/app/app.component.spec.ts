@@ -15,17 +15,4 @@ describe("AppComponent", () => {
 		const app: AppComponent = fixture.componentInstance;
 		expect(app).toBeTruthy();
 	});
-
-	it(`should have as title 'app1'`, () => {
-		const fixture: ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
-		const app: AppComponent = fixture.componentInstance;
-		expect(app.title).toEqual("app1");
-	});
-
-	it("should render title", () => {
-		const fixture: ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
-		fixture.detectChanges();
-		const compiled: any = fixture.nativeElement;
-		expect(compiled.querySelector(".content span").textContent).toContain("app1 app is running!");
-	});
 });

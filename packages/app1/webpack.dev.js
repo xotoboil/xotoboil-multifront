@@ -14,24 +14,6 @@ module.exports = {
 		runtimeChunk: false,
 	},
 
-	// module: {
-	// 	rules: [
-	// 		{
-	// 			test: /index\.s[ac]ss$/i,
-	// 			loader: require.resolve("postcss-loader"),
-	// 			options: {
-	// 				postcssOptions: {
-	// 					plugins: [
-	// 						prefixer({
-	// 							prefix: "#single-spa-application\\:app1",
-	// 						}),
-	// 					],
-	// 				},
-	// 			},
-	// 		},
-	// 	],
-	// },
-
 	plugins: [
 		new ModuleFederationPlugin({
 			name: "app1",
@@ -39,11 +21,6 @@ module.exports = {
 			filename: "remoteEntry.js",
 			exposes: {
 				"./ApplicationPage": "./src/main.single-spa.ts",
-			},
-			shared: {
-				// "@angular/core": {eager: true, singleton: true,},
-				// "@angular/common": {eager: true, singleton: true},
-				// "@angular/router": {eager: true, singleton: true},
 			},
 		}),
 	],

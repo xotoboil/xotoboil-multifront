@@ -8,10 +8,10 @@
 		"types": ["jest", "node"],
 		"downlevelIteration": true,
 		"experimentalDecorators": true,
-		"moduleResolution": "node",
-		"importHelpers": true,
+		// "importHelpers": true,
 		"target": "es2015",
-		"module": "es2020",
+		"module": "es2015",
+		"moduleResolution": "node",
 		"lib": ["es2018", "dom"],
 		"strict": false,
 		"paths": {

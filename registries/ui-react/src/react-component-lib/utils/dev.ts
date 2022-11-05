@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* tslint:disable */
 export const isDevMode = () => {
   return process && process.env && process.env.NODE_ENV === 'development';
 };
