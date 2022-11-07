@@ -16,12 +16,10 @@
 		"strict": false,
 		"paths": {
 			"@angular/*": ["./node_modules/@angular/*"],
-			"@/*": ["src/*"]			
+			"@/*": ["src/*"]
 		}
 	},
-	
+
 	"include": ["src/**/*.ts", "src/**/*.tsx", "tests/**/*.ts", "tests/**/*.tsx"],
 	"exclude": ["node_modules"]
-	
-	
 }

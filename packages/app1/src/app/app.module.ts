@@ -29,4 +29,4 @@ import { EmptyRouteComponent } from "@/app/pages/empty-route/empty-route-compone
 	providers: [],
 	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

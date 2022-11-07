@@ -1,6 +1,6 @@
 version: "3"
 services:
-  ui:
-    build: .
-    container_name: ui
-    image: ui
+    ui:
+        build: .
+        container_name: ui
+        image: ui

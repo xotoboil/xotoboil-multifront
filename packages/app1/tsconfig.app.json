@@ -6,7 +6,7 @@
 		"types": [],
 		"paths": {
 			"@angular/*": ["./node_modules/@angular/*"],
-			"@/*": ["src/*"]			
+			"@/*": ["src/*"]
 		}
 	},
 	"files": ["src/main.ts", "src/polyfills.ts"],

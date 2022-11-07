@@ -34,7 +34,7 @@
 		"@storybook/addon-actions": "^6.5.9",
 		"@storybook/addon-essentials": "^6.5.9",
 		"@storybook/addon-interactions": "^6.5.9",
-		"postcss-prefix-selector": "^1.13.0",
+		"postcss-prefix-selector": "^1.16.0",
 		"@storybook/addon-links": "^6.5.9",
 		"@storybook/builder-webpack5": "^6.5.9",
 		"@storybook/manager-webpack5": "^6.5.9",
