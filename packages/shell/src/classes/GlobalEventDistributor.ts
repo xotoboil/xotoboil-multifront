@@ -1,6 +1,7 @@
 import { GlobalStore } from "./GlobalStore";
+import { GlobalEventDistributor as IGlobalEventDistributor } from "@xotoboil-multifront/common";
 
-export class GlobalEventDistributor {
+export class GlobalEventDistributor implements IGlobalEventDistributor {
 	globalStore: GlobalStore = new GlobalStore();
 
 	handlerList: { event: string; callback: Function }[] = [];
