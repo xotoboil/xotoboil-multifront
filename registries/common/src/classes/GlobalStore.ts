@@ -1,3 +1,3 @@
-export class GlobalStore {
-	counter: number = 0;
+export interface GlobalStore {
+	counter: number;
 }

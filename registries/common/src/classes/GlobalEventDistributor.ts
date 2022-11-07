@@ -1,15 +1,11 @@
 import { GlobalStore } from "./GlobalStore";
 
-export class GlobalEventDistributor {
-	globalStore: GlobalStore = new GlobalStore();
+export interface GlobalEventDistributor {
+	globalStore: GlobalStore;
 
-	handlerList: { event: string; callback: Function }[] = [];
+	handlerList: { event: string; callback: Function }[];
 
-	on(event: string, callback: Function) {
-		this.handlerList.push({ event, callback });
-	}
+	on(event: string, callback: Function): void;
 
-	emit(event: string) {
-		this.handlerList.filter((handler: any) => handler.event === event).forEach((handler: any) => handler.callback());
-	}
+	emit(event: string): void;
 }
