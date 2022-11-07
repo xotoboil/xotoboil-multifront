@@ -14,12 +14,14 @@
 	"peerDependencies": {
 		"@angular/common": "^14.2.0",
 		"@angular/core": "^14.2.0",
-		"rxjs": "~7.5.0"
+		"rxjs": "~7.5.0",
+		"@xotoboil-multifront/ui": "*"
 	},
 	"dependencies": {
 		"tslib": "^2.3.0"
 	},
 	"devDependencies": {
+		"@xotoboil-multifront/ui": "*",
 		"@angular-devkit/build-angular": "^14.2.8",
 		"@angular/cli": "~14.2.8",
 		"@angular/compiler-cli": "^14.2.0",

@@ -1,7 +1,7 @@
 {
 	"name": "@xotoboil-multifront/common",
 	"version": "0.0.0",
-	"main": "lib/index.js",
+	"main": "lib/main.js",
 	"types": "lib/index.d.ts",
 	"scripts": {
 		"start": "echo starting",

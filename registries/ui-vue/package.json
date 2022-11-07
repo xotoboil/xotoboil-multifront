@@ -9,7 +9,13 @@
 		"tsc": "tsc -p .",
 		"clean": "rm -rf dist && rm -rf lib"
 	},
+	"peerDependencies": {
+		"@xotoboil-multifront/ui": "*"
+	},
 	"dependencies": {
 		"vue": "^3.0.0"
+	},
+	"devDependencies": {
+		"@xotoboil-multifront/ui": "*"
 	}
 }
