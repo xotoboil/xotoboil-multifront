@@ -10,6 +10,6 @@
 		}
 	},
 	"files": ["src/main.ts", "src/polyfills.ts"],
-	"include": ["src/main.ts", "src/polyfills.ts", "src/main.single-spa.ts"],
+	"include": ["src/main.ts", "src/polyfills.ts", "src/index.ts"],
 	"exclude": ["src/test.ts", "src/**/*.spec.ts"]
 }

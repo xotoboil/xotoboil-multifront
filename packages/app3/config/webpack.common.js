@@ -13,11 +13,6 @@ module.exports = {
 			{
 				test: /\.vue$/,
 				loader: "vue-loader",
-				options: {
-					compilerOptions: {
-						isCustomElement: (tag) => tag.startsWith("ui-"),
-					},
-				},
 			},
 			{
 				test: /\.tsx?$/,

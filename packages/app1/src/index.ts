@@ -26,19 +26,19 @@ const lifecycles: LifeCycles<{ globalEventDistributor: GlobalEventDistributor }>
 
 export const bootstrap: LifeCycleFn<{ globalEventDistributor: GlobalEventDistributor }> | LifeCycleFn<{ globalEventDistributor: GlobalEventDistributor }>[] = async <T extends { globalEventDistributor: GlobalEventDistributor } & AppProps>(props: T) => {
 	if (typeof lifecycles.bootstrap === "function") {
-		lifecycles.bootstrap(props);
+		lifecycles.bootstrap(props as any);
 	}
 };
 
 export const mount: LifeCycleFn<{ globalEventDistributor: GlobalEventDistributor }> | LifeCycleFn<{ globalEventDistributor: GlobalEventDistributor }>[] = async <T extends { globalEventDistributor: GlobalEventDistributor } & AppProps>(props: T) => {
 	if (typeof lifecycles.mount === "function") {
-		lifecycles.mount(props);
+		lifecycles.mount(props as any);
 	}
 };
 
 export const unmount: LifeCycleFn<{ globalEventDistributor: GlobalEventDistributor }> | LifeCycleFn<{ globalEventDistributor: GlobalEventDistributor }>[] = async <T extends { globalEventDistributor: GlobalEventDistributor } & AppProps>(props: T) => {
 	if (typeof lifecycles.unmount === "function") {
-		await lifecycles.unmount(props);
+		await lifecycles.unmount(props as any);
 	}
 	if (document.getElementById("single-spa-application:app1")) document.getElementById("single-spa-application:app1").innerHTML = "";
 };

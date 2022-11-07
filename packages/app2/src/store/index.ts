@@ -1,5 +1,5 @@
 import { combineReducers, createStore, Store } from "redux";
-import { globalEventDistributor } from "@/App";
+import { globalEventDistributor } from "@/index";
 import { counterReducer } from "@/store/reducers/counter.reducer";
 import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 

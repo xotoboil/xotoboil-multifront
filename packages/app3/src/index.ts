@@ -21,15 +21,15 @@ const lifecycles: SingleSpaVueLifecycles = singleSpaVue({
 });
 
 export const bootstrap: any = function (props: { globalEventDistributor: GlobalEventDistributor }) {
-	return lifecycles.bootstrap(props);
+	return lifecycles.bootstrap(props as any);
 };
 
 export const mount: any = function (props: { globalEventDistributor: GlobalEventDistributor }) {
-	return lifecycles.mount(props);
+	return lifecycles.mount(props as any);
 };
 
 export const unmount: any = function (props: { globalEventDistributor: GlobalEventDistributor }) {
-	return lifecycles.unmount(props);
+	return lifecycles.unmount(props as any);
 };
 
 export default { bootstrap, mount, unmount };

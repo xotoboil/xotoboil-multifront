@@ -9,6 +9,6 @@
 			"@/*": ["src/*"]
 		}
 	},
-	"files": ["src/test.ts", "src/polyfills.ts", "src/main.single-spa.ts"],
+	"files": ["src/test.ts", "src/polyfills.ts", "src/index.ts"],
 	"include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }

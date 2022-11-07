@@ -7,7 +7,7 @@ const path = require("path");
 __webpack_base_uri__ = "http://localhost:8082";
 
 const devConfig = {
-	entry: path.resolve(process.cwd(), "src/App.tsx"),
+	entry: path.resolve(process.cwd(), "src/index.ts"),
 
 	mode: "development",
 
@@ -25,7 +25,7 @@ const devConfig = {
 			name: "app2",
 			filename: "remoteEntry.js",
 			exposes: {
-				"./ApplicationPage": "./src/App",
+				"./ApplicationPage": "./src/index",
 			},
 			shared: [
 				{
