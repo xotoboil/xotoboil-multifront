@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { globalEventDistributor } from "../../../single-spa/single-spa-props";
+import { globalEventDistributor } from "@/single-spa/single-spa-props";
 import { select, Store } from "@ngrx/store";
 import { CounterModel } from "@/app/models/CounterModel";
 import { selectCounter } from "@/app/store/reducers/counter.reducer";
