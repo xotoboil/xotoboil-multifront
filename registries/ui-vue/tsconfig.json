@@ -12,6 +12,7 @@
 		"module": "es2015",
 		"moduleResolution": "node",
 		"target": "es2017",
+		"strict": false,
 		"skipLibCheck": true
 	},
 	"include": ["./src/**/*.ts"],

@@ -2,9 +2,9 @@
 	<div>
 		<h1>vue app3</h1>
 		<h2>Local Counter {{ counter }}</h2>
-		<h2>Global Counter {{ globalEventDistributor.globalStore.counter }}</h2>
+		<h2>Global Counter {{ globalEventDistributor ? globalEventDistributor.globalStore.counter : null }}</h2>
 		<ui-button @click="increment">increment</ui-button>
-		<ui-button @click="globalEventDistributor.globalStore.counter++">increment global</ui-button>
+		<ui-button @click="globalEventDistributor && globalEventDistributor.globalStore.counter++">increment global</ui-button>
 	</div>
 </template>
 

@@ -11,4 +11,8 @@ module.exports = {
 	testEnvironmentOptions: {
 		customExportConditions: ["node", "node-addons"],
 	},
+	moduleNameMapper: {
+		"@/(.*)$": "<rootDir>/src/$1",
+		"@xotoboil-multifront/ui-vue": "<rootDir>../../registries/ui-vue/src",
+	},
 };
