@@ -8,6 +8,6 @@ const AppTestWrapper: any = (): React.ReactElement => {
 describe("App", () => {
 	test("should render <App/>", () => {
 		render(<AppTestWrapper />);
-		expect(screen.getByRole("heading", { name: /react application template/i })).toBeDefined();
+		expect(screen.getByRole("heading", { name: /local counter/i })).toBeDefined();
 	});
 });

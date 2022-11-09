@@ -6,10 +6,12 @@ module.exports = {
 	coverageReporters: ["lcov", "text"],
 	coverageDirectory: "build/coverage",
 	transform: {
-		"^.+\\.ts?$": "ts-jest",
+		"^.+\\.ts?$": ["ts-jest"],
 	},
 	testRegex: ".*\\.test\\.ts",
 	moduleNameMapper: {
 		"@/(.*)$": "<rootDir>/src/$1",
+		"@xotoboil-multifront/ui-react": "<rootDir>../../registries/ui-react/src",
 	},
+	testEnvironment: "jsdom",
 };

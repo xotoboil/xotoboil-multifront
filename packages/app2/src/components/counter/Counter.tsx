@@ -6,7 +6,7 @@ import store, { getGlobalEventDistributer } from "@/store";
 
 export const Counter: any = (props: any): JSX.Element => {
 	const localCounter = useSelector((state: CounterModel) => state.counter.counter);
-	const [globalEventDistributerCounter, setGlobalEventDistributerCounterState] = useState(getGlobalEventDistributer().globalStore.counter);
+	const [globalEventDistributerCounter, setGlobalEventDistributerCounterState] = useState(getGlobalEventDistributer() ? getGlobalEventDistributer().globalStore.counter : 0);
 	const setGlobalEventDistributerCounter = (value: number) => {
 		setGlobalEventDistributerCounterState(value);
 		getGlobalEventDistributer().globalStore.counter + 1;

@@ -5,7 +5,7 @@
 		"esModuleInterop": true,
 		"baseUrl": ".",
 		"sourceMap": true,
-		"strict": true,
+		"strict": false,
 		"types": ["jest", "node", "react-dom", "react"],
 		"jsx": "react",
 		"paths": {

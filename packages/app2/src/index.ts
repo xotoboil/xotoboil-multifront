@@ -5,11 +5,13 @@ import singleSpaReact from "single-spa-react";
 import { App } from "./App";
 import React from "react";
 
-const reactLifecycles = singleSpaReact({
-	React,
-	ReactDOM,
-	rootComponent: App,
-});
+const reactLifecycles = App
+	? singleSpaReact({
+		React,
+		ReactDOM,
+		rootComponent: App,
+	})
+	: { bootstrap: () => { }, mount: () => { }, unmount: () => { } };
 
 export function bootstrap(props: { globalEventDistributor: GlobalEventDistributor }) {
 	globalEventDistributor = props.globalEventDistributor;
