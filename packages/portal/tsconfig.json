@@ -5,7 +5,7 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"sourceMap": true,
-		"types": ["node"],
+		"types": ["jest", "node", "react-dom", "react"],
 		"strict": true,
 		"jsx": "react"
 	},
