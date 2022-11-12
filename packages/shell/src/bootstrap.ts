@@ -22,13 +22,13 @@ registerApplication(
 		registerApplication(
 			"app2",
 			() => import("app2/ApplicationPage"),
-			(location: Location) => location.pathname.startsWith("/react"),
+			(location: Location) => location.pathname.startsWith("/react-vue"),
 			{ globalEventDistributor },
 		);
 		registerApplication(
 			"app3",
 			() => import("app3/ApplicationPage"),
-			(location: Location) => location.pathname.startsWith("/vue"),
+			(location: Location) => location.pathname.startsWith("/react-vue"),
 			{ globalEventDistributor },
 		);
 		return portal;

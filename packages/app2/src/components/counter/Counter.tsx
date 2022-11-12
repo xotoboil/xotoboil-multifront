@@ -16,14 +16,10 @@ export const Counter: any = (props: any): JSX.Element => {
 		<div>
 			<h2 data-testid="local_counter">Local Counter: {localCounter}</h2>
 			<h2 data-testid="global_counter">Global Counter: {globalEventDistributerCounter}</h2>
-			<UiButton
-				onClick={() => {
-					store.dispatch({ type: "counter/counterIncrement" });
-				}}
-			>
-				increment
-			</UiButton>
-			<UiButton onClick={() => setGlobalEventDistributerCounter(globalEventDistributerCounter + 1)}>increment global</UiButton>
+				<div className="action">
+					<UiButton onClick={() => { store.dispatch({ type: "counter/counterIncrement" }); }} >increment</UiButton>
+					<UiButton onClick={() => setGlobalEventDistributerCounter(globalEventDistributerCounter + 1)}>increment global</UiButton>
+				</div>
 		</div>
 	);
 };

@@ -17,14 +17,8 @@ export const NavBar: any = (): JSX.Element => (
 			</li>
 			&nbsp;|&nbsp;
 			<li style={{ display: "inline" }}>
-				<a href="/react" onClick={navigateToUrl}>
-					React Application
-				</a>
-			</li>
-			&nbsp;|&nbsp;
-			<li style={{ display: "inline" }}>
-				<a href="/vue" onClick={navigateToUrl}>
-					Vue Application
+				<a href="/react-vue" onClick={navigateToUrl}>
+					React Vue Application
 				</a>
 			</li>
 		</ul>
