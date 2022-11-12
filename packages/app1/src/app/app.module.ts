@@ -7,24 +7,27 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "@/environments/environment";
 import { rootReducer } from "@/app/store/root-reducer";
 
-import { AppRoutingModule } from "@/app/app-routing.module";
+import { AppRoutingModule } from "@/assets/app-routing.module";
 import { AppComponent } from "@/app/app.component";
-import { CounterModule } from "@/app/components/counter/counter.module";
 import { EmptyRouteComponent } from "@/app/pages/empty-route/empty-route-component";
+import { CounterComponent } from "@/app/components/counter/counter.component";
+import { CommonModule } from "@angular/common";
+import { UiLibrary } from "@xotoboil-multifront/ui-angular";
 
 @NgModule({
-	declarations: [AppComponent, EmptyRouteComponent],
+	declarations: [AppComponent, EmptyRouteComponent, CounterComponent],
 	imports: [
 		StoreModule.forRoot(rootReducer),
 		StoreDevtoolsModule.instrument({
 			maxAge: 25,
 			logOnly: environment.production,
 		}),
+		CommonModule,
+		UiLibrary,
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		FormsModule,
-		CounterModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

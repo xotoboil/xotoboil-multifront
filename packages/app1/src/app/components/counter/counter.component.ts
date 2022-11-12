@@ -9,18 +9,13 @@ import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
 @Component({
 	selector: "app-counter",
-	template: `
-		<div>
-			<h2>Local Counter: {{ localCounter ? (localCounter | async) : 0 }}</h2>
-			<h2>Global Counter: {{ globalEventDistributor && globalEventDistributor.globalStore ? globalEventDistributor.globalStore.counter : 0 }}</h2>
-			<ui-button (click)="incrementCounter()">increment</ui-button>
-			<ui-button (click)="incrementCounterGlobal()">increment global</ui-button>
-		</div>
-	`,
+	templateUrl: './counter.component.html',
+	styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent implements OnInit {
 	public localCounter: Observable<number>;
 	public globalEventDistributor: GlobalEventDistributor;
+	title: string = "angular app1";
 
 	constructor(private store: Store<CounterModel>) {
 		if (globalEventDistributor && globalEventDistributor.globalStore) this.globalEventDistributor = globalEventDistributor;
