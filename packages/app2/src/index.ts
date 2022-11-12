@@ -7,11 +7,11 @@ import React from "react";
 
 const reactLifecycles = App
 	? singleSpaReact({
-		React,
-		ReactDOM,
-		rootComponent: App,
-	})
-	: { bootstrap: () => { }, mount: () => { }, unmount: () => { } };
+			React,
+			ReactDOM,
+			rootComponent: App,
+	  })
+	: { bootstrap: () => {}, mount: () => {}, unmount: () => {} };
 
 export function bootstrap(props: { globalEventDistributor: GlobalEventDistributor }) {
 	globalEventDistributor = props.globalEventDistributor;

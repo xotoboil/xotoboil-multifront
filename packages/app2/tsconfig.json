@@ -6,7 +6,7 @@
 		"baseUrl": ".",
 		"sourceMap": true,
 		"strict": false,
-		"types": ["jest", "node", "react-dom", "react"],
+		"types": ["jest", "node", "react-dom", "react", "@testing-library/jest-dom"],
 		"jsx": "react",
 		"paths": {
 			"@/*": ["./src/*"]

@@ -6,36 +6,35 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface UiButton {
-        "text": string | undefined;
-        "type": string | undefined;
-    }
+	interface UiButton {
+		text: string | undefined;
+		type: string | undefined;
+	}
 }
 declare global {
-    interface HTMLUiButtonElement extends Components.UiButton, HTMLStencilElement {
-    }
-    var HTMLUiButtonElement: {
-        prototype: HTMLUiButtonElement;
-        new (): HTMLUiButtonElement;
-    };
-    interface HTMLElementTagNameMap {
-        "ui-button": HTMLUiButtonElement;
-    }
+	interface HTMLUiButtonElement extends Components.UiButton, HTMLStencilElement {}
+	var HTMLUiButtonElement: {
+		prototype: HTMLUiButtonElement;
+		new (): HTMLUiButtonElement;
+	};
+	interface HTMLElementTagNameMap {
+		"ui-button": HTMLUiButtonElement;
+	}
 }
 declare namespace LocalJSX {
-    interface UiButton {
-        "text"?: string | undefined;
-        "type"?: string | undefined;
-    }
-    interface IntrinsicElements {
-        "ui-button": UiButton;
-    }
+	interface UiButton {
+		text?: string | undefined;
+		type?: string | undefined;
+	}
+	interface IntrinsicElements {
+		"ui-button": UiButton;
+	}
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
-    export namespace JSX {
-        interface IntrinsicElements {
-            "ui-button": LocalJSX.UiButton & JSXBase.HTMLAttributes<HTMLUiButtonElement>;
-        }
-    }
+	export namespace JSX {
+		interface IntrinsicElements {
+			"ui-button": LocalJSX.UiButton & JSXBase.HTMLAttributes<HTMLUiButtonElement>;
+		}
+	}
 }

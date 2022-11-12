@@ -9,14 +9,20 @@ export const Counter: any = (props: any): JSX.Element => {
 	const [globalEventDistributerCounter, setGlobalEventDistributerCounterState] = useState(getGlobalEventDistributer() ? getGlobalEventDistributer().globalStore.counter : 0);
 	const setGlobalEventDistributerCounter = (value: number) => {
 		setGlobalEventDistributerCounterState(value);
-		getGlobalEventDistributer().globalStore.counter + 1;
+		getGlobalEventDistributer()?.globalStore?.counter + 1;
 	};
 
 	return (
 		<div>
-			<h2>Local Counter: {localCounter}</h2>
-			<h2>Global Counter: {globalEventDistributerCounter}</h2>
-			<UiButton onClick={() => store.dispatch({ type: "counter/counterIncrement" })}>increment</UiButton>
+			<h2 data-testid="local_counter">Local Counter: {localCounter}</h2>
+			<h2 data-testid="global_counter">Global Counter: {globalEventDistributerCounter}</h2>
+			<UiButton
+				onClick={() => {
+					store.dispatch({ type: "counter/counterIncrement" });
+				}}
+			>
+				increment
+			</UiButton>
 			<UiButton onClick={() => setGlobalEventDistributerCounter(globalEventDistributerCounter + 1)}>increment global</UiButton>
 		</div>
 	);
