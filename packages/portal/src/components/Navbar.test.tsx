@@ -13,7 +13,7 @@ describe("Navbar", () => {
 
 	test("should render four links", () => {
 		const { container } = render(<ComponentWrapper />);
-		expect(container.querySelectorAll("li").length).toBe(4);
+		expect(container.querySelectorAll("li").length).toBe(3);
 	});
 
 	test("Angular Application link should redirect to the angular page", () => {

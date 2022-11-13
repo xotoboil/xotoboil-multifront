@@ -83,19 +83,6 @@
 						"browserTarget": "app1:build"
 					}
 				},
-				"test": {
-					"builder": "ngx-build-plus:karma",
-					"options": {
-						"main": "src/test.ts",
-						"polyfills": "src/polyfills.ts",
-						"tsConfig": "tsconfig.spec.json",
-						"karmaConfig": "karma.conf.js",
-						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/index.scss"],
-						"scripts": [],
-						"extraWebpackConfig": "webpack.dev.js"
-					}
-				},
 				"lint": {
 					"builder": "@angular-devkit/build-angular:tslint",
 					"options": {

@@ -1,16 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { globalEventDistributor } from "@/single-spa/single-spa-props";
+import { globalEventDistributor } from "../../../single-spa/single-spa-props";
 import { select, Store } from "@ngrx/store";
-import { CounterModel } from "@/app/models/CounterModel";
-import { selectCounter } from "@/app/store/reducers/counter.reducer";
-import { DecrementCounter, IncrementCounter, ResetCounter } from "@/app/store/actions/counter.actions";
+import { CounterModel } from "../../models/CounterModel";
+import { selectCounter } from "../../store/reducers/counter.reducer";
+import { DecrementCounter, IncrementCounter, ResetCounter } from "../../store/actions/counter.actions";
 import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
 @Component({
 	selector: "app-counter",
-	templateUrl: './counter.component.html',
-	styleUrls: ['./counter.component.scss']
+	templateUrl: "./counter.component.html",
+	styleUrls: ["./counter.component.scss"],
 })
 export class CounterComponent implements OnInit {
 	public localCounter: Observable<number>;

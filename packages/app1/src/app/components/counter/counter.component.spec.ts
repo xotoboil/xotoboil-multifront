@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { CounterComponent } from "./counter.component";
 import { StoreModule } from "@ngrx/store";
-import { rootReducer } from "@/app/store/root-reducer";
-import { DecrementCounter, IncrementCounter, ResetCounter } from "@/app/store/actions/counter.actions";
+import { rootReducer } from "../../store/root-reducer";
+import { DecrementCounter, IncrementCounter, ResetCounter } from "../../store/actions/counter.actions";
 
 describe("CounterComponent", () => {
 	let component: CounterComponent;
@@ -41,7 +41,7 @@ describe("CounterComponent", () => {
 
 	describe("incrementCounter", () => {
 		it("should dispatch the IncrementCounter action", () => {
-			const fnDispatch = spyOn(component["store"], "dispatch");
+			const fnDispatch = jest.spyOn(component["store"], "dispatch");
 			component.ngOnInit();
 			component.incrementCounter();
 			expect(fnDispatch).toHaveBeenCalledWith(new IncrementCounter());
@@ -50,7 +50,7 @@ describe("CounterComponent", () => {
 
 	describe("decrementCounter", () => {
 		it("should dispatch the DecrementCounter action", () => {
-			const fnDispatch = spyOn(component["store"], "dispatch");
+			const fnDispatch = jest.spyOn(component["store"], "dispatch");
 			component.decrementCounter();
 			expect(fnDispatch).toHaveBeenCalledWith(new DecrementCounter());
 		});
@@ -58,7 +58,7 @@ describe("CounterComponent", () => {
 
 	describe("reset", () => {
 		it("should dispatch the Reset action", () => {
-			const fnDispatch = spyOn(component["store"], "dispatch");
+			const fnDispatch = jest.spyOn(component["store"], "dispatch");
 			component.resetCounter();
 			expect(fnDispatch).toHaveBeenCalledWith(new ResetCounter());
 		});

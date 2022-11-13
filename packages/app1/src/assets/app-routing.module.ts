@@ -4,9 +4,9 @@ import { CounterComponent } from "../app/components/counter/counter.component";
 import { EmptyRouteComponent } from "../app/pages/empty-route/empty-route-component";
 
 const routes: Routes = [
+	{ path: "angular", component: CounterComponent },
 	{ path: "**", component: EmptyRouteComponent },
-	{ path: "", component: CounterComponent },
 ];
 
 @NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
