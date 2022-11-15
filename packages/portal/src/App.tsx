@@ -6,9 +6,7 @@ import { NavBar } from "./components/NavBar";
 import "./index.scss";
 import { GlobalEventDistributor } from "@xotoboil-multifront/common";
 
-export const App: any = (): JSX.Element => (
-		<NavBar />
-);
+export const App: any = (): JSX.Element => <NavBar />;
 
 const headerLifecycles = singleSpaReact({
 	React,

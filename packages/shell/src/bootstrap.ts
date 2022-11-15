@@ -9,6 +9,8 @@ const globalEventDistributor: GlobalEventDistributor = new GlobalEventDistributo
  * Register applications here
  */
 
+console.log(globalEventDistributor)
+
 registerApplication(
 	"portal",
 	async () => import("portal/App"),

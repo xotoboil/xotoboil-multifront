@@ -2,10 +2,10 @@
 	<div>
 		<h1>vue app3</h1>
 		<h2 id="local_counter">Local Counter {{ counter }}</h2>
-		<h2 id="global_counter">Global Counter {{ globalEventDistributor ? globalEventDistributor.globalStore.counter : null }}</h2>
+		<h2 id="global_counter">Global Counter {{ globalCounter }}</h2>
 		<div class="action">
 			<ui-button id="incrementBtn" @click="increment()">increment</ui-button>
-			<ui-button id="incrementGlobalBtn" @click="globalEventDistributor && globalEventDistributor.globalStore.counter++">increment global</ui-button>
+			<ui-button id="incrementGlobalBtn" @click="incrementGlobal">increment global</ui-button>
 		</div>
 	</div>
 </template>
@@ -23,12 +23,28 @@ export default class Counter extends Vue {
 	@Prop()
 	globalEventDistributor!: GlobalEventDistributor;
 
+	globalCounter = 0;
+
 	get counter() {
 		return store.state.counter;
 	}
 
 	increment() {
 		store.dispatch("counterIncrement");
+	}
+
+	created(): void {
+		this.globalCounter = this.globalEventDistributor.globalStore.counter;
+		this.globalEventDistributor.on("increment", () => {
+			this.globalCounter = this.globalEventDistributor.globalStore.counter;
+		});
+	}
+
+	incrementGlobal() {
+		if (this.globalEventDistributor) {
+			this.globalEventDistributor.globalStore.counter += 1;
+			this.globalEventDistributor.emit("increment");
+		}
 	}
 }
 </script>
