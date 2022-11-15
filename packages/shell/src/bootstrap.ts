@@ -11,30 +11,28 @@ const globalEventDistributor: GlobalEventDistributor = new GlobalEventDistributo
 
 registerApplication(
 	"portal",
-	async () => {
-		const portal = await import("portal/App");
-		registerApplication(
-			"app1",
-			() => import("app1/ApplicationPage"),
-			(location: Location) => location.pathname.startsWith("/angular"),
-			{ globalEventDistributor },
-		);
-		registerApplication(
-			"app2",
-			() => import("app2/ApplicationPage"),
-			(location: Location) => location.pathname.startsWith("/react-vue"),
-			{ globalEventDistributor },
-		);
-		registerApplication(
-			"app3",
-			() => import("app3/ApplicationPage"),
-			(location: Location) => location.pathname.startsWith("/react-vue"),
-			{ globalEventDistributor },
-		);
-		return portal;
-	},
+	async () => import("portal/App"),
 	() => true,
-	{ globalEventDistributor },
+	{ globalEventDistributor, domElement: document.getElementById("single-spa-application:portal") },
+);
+
+registerApplication(
+	"app1",
+	() => import("app1/ApplicationPage"),
+	(location: Location) => location.pathname.startsWith("/angular"),
+	{ globalEventDistributor, domElement: document.getElementById("single-spa-application:app1") },
+);
+registerApplication(
+	"app2",
+	() => import("app2/ApplicationPage"),
+	(location: Location) => location.pathname.startsWith("/react-vue"),
+	{ globalEventDistributor, domElement: document.getElementById("single-spa-application:app2") },
+);
+registerApplication(
+	"app3",
+	() => import("app3/ApplicationPage"),
+	(location: Location) => location.pathname.startsWith("/react-vue"),
+	{ globalEventDistributor, domElement: document.getElementById("single-spa-application:app3") },
 );
 
 start();
